@@ -1,25 +1,56 @@
 <div align="center">
 
-<img src="desktop-app/src-tauri/icons/128x128@2x.png" width="88" alt="MeshAudio" />
+![MeshAudio](desktop-app/src-tauri/icons/128x128@2x.png)
 
 # MeshAudio · 局域网音频路由
 
 **把手机的声音，接到你想让它去的地方**
 
-[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)](LICENSE)
+![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)
+
 ![Version](https://img.shields.io/badge/version-0.3.1-2ea44f?style=flat-square)
+
 ![Status](https://img.shields.io/badge/status-pre--release-orange?style=flat-square)
+
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20%7C%20Android%2010%2B-lightgrey?style=flat-square)
-[![Tauri](https://img.shields.io/badge/Tauri-2-24C8DB?style=flat-square&logo=tauri&logoColor=white)](https://tauri.app/)
-[![Vue](https://img.shields.io/badge/Vue-3-42B883?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/)
-[![Rust](https://img.shields.io/badge/Rust-stable-dea584?style=flat-square&logo=rust&logoColor=white)](https://www.rust-lang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-22-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
+
+![Tauri](https://img.shields.io/badge/Tauri-2-24C8DB?style=flat-square\&logo=tauri\&logoColor=white)
+
+![Vue](https://img.shields.io/badge/Vue-3-42B883?style=flat-square\&logo=vue.js\&logoColor=white)
+
+![Rust](https://img.shields.io/badge/Rust-stable-dea584?style=flat-square\&logo=rust\&logoColor=white)
+
+![Node.js](https://img.shields.io/badge/Node.js-22-339933?style=flat-square\&logo=node.js\&logoColor=white)
 
 [下载与安装](#下载与安装) · [核心能力](#核心能力) · [工作原理](#工作原理) · [技术栈](#技术栈) · [从源码构建](#从源码构建) · [常见问题](#常见问题) · [参与贡献](#参与贡献)
+
+**简体中文** · [English](README.en.md)
 
 </div>
 
 ---
+
+## 前言
+
+最近在玩《三角洲行动》（Delta Force）。打过最后一队的人都知道，最后几分钟经常要蹲在草里等很久，我就一边架枪一边刷手机——游戏声在电脑，视频声在手机，两副耳机叠在头上实在难受。
+
+我设备比较多，一直想要一个很朴素的功能：**多个设备的声音，同时进同一个耳机**。以前靠一副赛睿（SteelSeries）耳机顶着，它能同时连三个设备，最近坏了；想换新的，能多设备混音的那几款又太贵。
+
+于是干脆自己写了一个：把各种设备的声音接进电脑，再决定它去哪。这就是 MeshAudio。
+
+写完一算账，消耗的 token 和买副新耳机差不多 :(
+
+## 功能预览
+
+<p align="center"><img src="docs/images/preview-multi-device.jpg" width="860" alt="手机、平板与电脑的声音汇入同一副耳机"></p>
+
+<p align="center"><sub>示意图：手机、平板、电脑的声音各自独立接入，汇入同一条路由，最后落到你戴着的那副耳机上。</sub></p>
+
+<p align="center"><img src="docs/images/preview-canvas-and-phone.jpg" width="860" alt="桌面端三列画布与手机接入页"></p>
+
+<p align="center"><sub>桌面端画布与手机接入页：左边是固定的「来源 → 混音通道 → 输出」三列，右边手机留空地址自动发现，麦克风与媒体音频分别启停。</sub></p>
+
+## 它是什么
 
 MeshAudio 是一个 **Windows 桌面端的局域网音频路由工具**。手机刷视频的声音、手机的麦克风，在它眼里是两路**互相独立**的音频来源；你在一张固定三列的画布上拖几根线，就能决定每一路去哪里：进耳机、变成电脑上的麦克风给会议软件用、或者几路混在一起。
 
@@ -32,7 +63,7 @@ MeshAudio 是一个 **Windows 桌面端的局域网音频路由工具**。手机
 
 > **项目状态**：当前版本 **0.3.1（验收候选版 / 预发布）**。核心链路已在真机与打包应用上跑通，但干净 Windows 系统的完整安装/卸载、iPhone 的 AAC-ELD 与耳机听感、30 分钟连续播放等门禁**尚未通过**；未完成项逐条列在[已知限制](docs/KNOWN-LIMITATIONS.md)。请按「试用与反馈」使用，不要当作生产稳定版。
 
-**目录**：[它能做什么](#它能做什么) · [下载与安装](#下载与安装) · [第一次连线](#第一次连线) · [接入设备](#接入设备) · [核心能力](#核心能力) · [工作原理](#工作原理) · [技术栈](#技术栈) · [项目结构](#项目结构) · [从源码构建](#从源码构建) · [常见问题](#常见问题) · [使用边界](#使用边界与已知限制) · [参与贡献](#参与贡献) · [开源许可](#开源许可)
+**目录**：[前言](#前言) · [功能预览](#功能预览) · [它能做什么](#它能做什么) · [下载与安装](#下载与安装) · [第一次连线](#第一次连线) · [接入设备](#接入设备) · [核心能力](#核心能力) · [工作原理](#工作原理) · [技术栈](#技术栈) · [项目结构](#项目结构) · [从源码构建](#从源码构建) · [常见问题](#常见问题) · [使用边界](#使用边界与已知限制) · [参与贡献](#参与贡献) · [开源许可](#开源许可)
 
 ## 它能做什么
 
@@ -74,13 +105,13 @@ flowchart LR
 
 到本仓库的 **[Releases → v0.3.1](https://github.com/kingyxs/MeshAudio/releases/tag/v0.3.1)** 下载：
 
-| 文件 | 用途 |
-| --- | --- |
-| `MeshAudio_0.3.1_x64-setup.exe` | Windows 10/11 x64 安装程序 |
-| `MeshAudio-Android-0.3.1-release.apk` | Android 节点（已签名，Android 10+） |
-| `MeshAudio-0.3.1-source.zip` | 项目源码（GPL 要求随二进制提供） |
-| `MeshAudio-0.3.1-third-party-sources.tar.gz` | 第三方组件的完整对应源码 |
-| `SHA256SUMS.txt` | 以上文件的 SHA-256 校验值 |
+| 文件                                           | 用途                          |
+| -------------------------------------------- | --------------------------- |
+| `MeshAudio_0.3.1_x64-setup.exe`              | Windows 10/11 x64 安装程序      |
+| `MeshAudio-Android-0.3.1-release.apk`        | Android 节点（已签名，Android 10+） |
+| `MeshAudio-0.3.1-source.zip`                 | 项目源码（GPL 要求随二进制提供）          |
+| `MeshAudio-0.3.1-third-party-sources.tar.gz` | 第三方组件的完整对应源码                |
+| `SHA256SUMS.txt`                             | 以上文件的 SHA-256 校验值           |
 
 ### 校验
 
@@ -209,27 +240,27 @@ Node.js 服务 server.js
   └─ 虚拟麦克风端点检测与写入
 ```
 
-| 用途 | 协议 | 默认端口 |
-| --- | --- | --- |
-| 控制面、状态同步 | HTTP / WebSocket | `4173/TCP` |
+| 用途         | 协议                       | 默认端口                         |
+| ---------- | ------------------------ | ---------------------------- |
+| 控制面、状态同步   | HTTP / WebSocket         | `4173/TCP`                   |
 | 网页麦克风页面与音频 | HTTP / HTTPS / WebSocket | `4176/TCP`、`4177/TCP`（配置证书后） |
-| 设备发现 | UDP 广播 JSON | `4174/UDP` |
-| 音频帧 | UDP（`MSA1` + PCM f32le） | `4175/UDP` |
+| 设备发现       | UDP 广播 JSON              | `4174/UDP`                   |
+| 音频帧        | UDP（`MSA1` + PCM f32le）  | `4175/UDP`                   |
 
 协议细节（发现请求、帧头、流元数据）见 [protocol/README.md](protocol/README.md)。
 
 ## 技术栈
 
-| 层 | 选型 |
-| --- | --- |
-| 桌面外壳 | Tauri 2 + Rust（单实例、托盘、随包服务生命周期） |
-| 界面 | Vue 3 · TypeScript · Vite · Pinia（三列画布、组件、i18n） |
-| 控制面 | Node.js（HTTP / WebSocket、路由状态、设备发现、诊断） |
-| 音频引擎 | C++20 + WASAPI 共享模式（`desktop/native`）；JS 引擎保留诊断与降级路径 |
-| 传输 | 自定义协议 v1：UDP 音频帧、UDP 广播发现、HTTP/WS 控制 |
-| 移动端 | Android 原生（Java，前台服务）；iOS 经 AirPlay（UxPlay + Bonjour） |
-| 虚拟麦克风 | 外部 VB-CABLE（可选专有组件，不随包分发） |
-| 打包 | NSIS（Windows x64） |
+| 层     | 选型                                                    |
+| ----- | ----------------------------------------------------- |
+| 桌面外壳  | Tauri 2 + Rust（单实例、托盘、随包服务生命周期）                       |
+| 界面    | Vue 3 · TypeScript · Vite · Pinia（三列画布、组件、i18n）       |
+| 控制面   | Node.js（HTTP / WebSocket、路由状态、设备发现、诊断）                |
+| 音频引擎  | C++20 + WASAPI 共享模式（`desktop/native`）；JS 引擎保留诊断与降级路径  |
+| 传输    | 自定义协议 v1：UDP 音频帧、UDP 广播发现、HTTP/WS 控制                  |
+| 移动端   | Android 原生（Java，前台服务）；iOS 经 AirPlay（UxPlay + Bonjour） |
+| 虚拟麦克风 | 外部 VB-CABLE（可选专有组件，不随包分发）                             |
+| 打包    | NSIS（Windows x64）                                     |
 
 ## 项目结构
 
@@ -251,14 +282,14 @@ meshAudio/
 └─ package.json
 ```
 
-| 模块 | 职责 |
-| --- | --- |
-| `server.js` | 路由状态、发现与音频入口、组件管理、HTTP/WS 控制面 |
-| `desktop/audio-engine.js` | 设备无关的混音、序号检查、丢包推进与抖动缓冲 |
-| `desktop/native/` | WASAPI 设备枚举、共享模式播放、虚拟麦克风写入 |
-| `desktop-app/` | 三列画布、设置与引导、Tauri 生命周期与托盘 |
-| `android/` | 媒体与麦克风双流采集、发现、前台服务与通知 |
-| `tools/` | 原生/AirPlay/Android 构建、协议与 UI 测试、导出发布材料 |
+| 模块                        | 职责                                     |
+| ------------------------- | -------------------------------------- |
+| `server.js`               | 路由状态、发现与音频入口、组件管理、HTTP/WS 控制面          |
+| `desktop/audio-engine.js` | 设备无关的混音、序号检查、丢包推进与抖动缓冲                 |
+| `desktop/native/`         | WASAPI 设备枚举、共享模式播放、虚拟麦克风写入             |
+| `desktop-app/`            | 三列画布、设置与引导、Tauri 生命周期与托盘               |
+| `android/`                | 媒体与麦克风双流采集、发现、前台服务与通知                  |
+| `tools/`                  | 原生/AirPlay/Android 构建、协议与 UI 测试、导出发布材料 |
 
 ## 从源码构建
 
@@ -290,6 +321,7 @@ npm run tauri:build --prefix desktop-app -- --bundles nsis
 完整的依赖、镜像与排错说明见 [从公开源码构建](docs/PUBLIC-BUILD.md)。
 
 ## 常见问题
+
 
 | 现象 | 先检查 |
 | --- | --- |
