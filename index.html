@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     MeshAudio 项目主页（GitHub Pages）
+     本页 <head> 中的 META 标签用于 QQ / Telegram / Discord 分享卡片
+     ============================================================ -->
+
+<!-- QQ / QQ空间：移动端 QQ 优先读取这一组 itemprop 标签 -->
+<meta itemprop="name" content="MeshAudio - 把手机的声音，接到你想让它去的地方">
+<meta itemprop="description" content="Windows 局域网音频路由工具：手机声音与麦克风是两路独立来源，在三列路由画布上拖线混音，可接入耳机、会议软件虚拟麦克风。支持 Android App、iPhone AirPlay、网页麦克风，GPL-3.0 开源。">
+<meta itemprop="image" content="https://kingyxs.github.io/MeshAudio/share-card.png">
+
+<!-- Open Graph：Telegram / Discord / 部分浏览器分享 会读取这一组 -->
+<meta property="og:title" content="MeshAudio - 把手机的声音，接到你想让它去的地方">
+<meta property="og:description" content="Windows 局域网音频路由：独立手机音源、三列路由画布、混音通道与外部输出。">
+<meta property="og:image" content="https://kingyxs.github.io/MeshAudio/share-card.png">
+<meta property="og:url" content="https://kingyxs.github.io/MeshAudio/">
+<meta property="og:type" content="website">
+
+<!-- 通用回退 -->
+<meta name="description" content="Windows 局域网音频路由工具：手机声音与麦克风独立路由、自由混音，接入会议软件与耳机。Android / iPhone AirPlay / 网页麦克风均可接入。">
+<title>MeshAudio - 把手机的声音，接到你想让它去的地方</title>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+         background: #0d1424; color: #cfe0f5; min-height: 100vh;
+         background: radial-gradient(circle at 25% 10%, #17233d 0%, #0d1424 55%, #0a101e 100%); }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 56px 24px 64px; }
+  h1 { color: #fff; font-size: 44px; letter-spacing: 1px; }
+  .sub { color: #9fb3d1; font-size: 20px; margin-top: 10px; letter-spacing: 4px; }
+  .tagline { color: #6d8dbb; font-size: 18px; margin-top: 6px; }
+  .hero { text-align: center; margin-bottom: 40px; }
+  .cardimg { width: min(420px, 86vw); border-radius: 14px; margin: 32px auto 0; display: block;
+             box-shadow: 0 12px 48px rgba(0,0,0,.55); border: 1px solid #24365a; }
+  .desc { color: #a9c0de; line-height: 1.9; font-size: 16.5px; }
+  .desc b { color: #d7e6fa; }
+  h2 { color: #fff; font-size: 22px; margin: 36px 0 14px; }
+  ul { padding-left: 22px; line-height: 2; color: #a9c0de; }
+  .btns { display: flex; gap: 14px; flex-wrap: wrap; margin: 28px 0 8px; justify-content: center; }
+  a.btn { display: inline-block; padding: 13px 26px; border-radius: 10px; text-decoration: none;
+          font-size: 16px; font-weight: 600; border: 1px solid #2f4a78; color: #bfe0ff;
+          transition: background .2s; }
+  a.btn:hover { background: #16233d; }
+  a.btn.primary { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
+  a.btn.primary:hover { background: #2563eb; }
+  .meta-note { margin-top: 48px; border-top: 1px solid #1c2b4a; padding-top: 20px;
+               color: #54719c; font-size: 14px; line-height: 1.8; }
+  code { background: #1a2740; padding: 2px 6px; border-radius: 4px; font-size: 13.5px; }
+  .foot { text-align: center; margin-top: 40px; color: #54719c; font-size: 14px; }
+  .foot a { color: #7fa3d4; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>MeshAudio</h1>
+    <div class="sub">LAN AUDIO ROUTING</div>
+    <div class="tagline">把手机的声音，接到你想让它去的地方</div>
+    <img class="cardimg" src="share-card.png" alt="MeshAudio 分享卡片：三列音频路由连线画布">
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/kingyxs/MeshAudio/releases">下载 v0.3.1</a>
+      <a class="btn" href="https://github.com/kingyxs/MeshAudio">GitHub 仓库</a>
+    </div>
+  </div>
+
+  <h2>它能做什么</h2>
+  <p class="desc">
+    手机刷视频的声音、手机的麦克风，在 MeshAudio 里是两路<b>独立</b>的音频来源。
+    你在一张三列画布（<b>音频来源 → 混音通道 → 外部输出</b>）上拖几根线，就能决定：
+    哪一路进耳机、哪一路变成电脑上的麦克风给会议软件用、哪几路混在一起。
+    改线随时生效，不会影响其他链路。
+  </p>
+
+  <ul>
+    <li><b>手机声音 → 耳机</b>：媒体音频走混音通道进系统播放设备</li>
+    <li><b>手机麦克风 → 电脑麦克风</b>：接入微信 / Zoom / 会议软件的虚拟输入</li>
+    <li><b>自由混音</b>：来源可一对多、通道可多对一，带音量、静音与电平显示</li>
+    <li><b>不会打断</b>：单路断开其他链路照常播放，恢复后自动接回</li>
+    <li><b>多种接入</b>：Android App、iPhone AirPlay、电脑浏览器网页麦克风</li>
+  </ul>
+
+  <h2>快速开始</h2>
+  <ul>
+    <li>从 <a href="https://github.com/kingyxs/MeshAudio/releases">Releases</a> 下载 Windows 安装包与 Android APK，建议用 <code>SHA256SUMS.txt</code> 校验</li>
+    <li>手机与电脑连到<b>同一可信局域网</b>，App 自动发现电脑即可连线</li>
+    <li>接 iPhone：控制中心「屏幕镜像」选择电脑（需先在应用内安装 Bonjour 组件）</li>
+  </ul>
+
+  <div class="meta-note">
+    <b>本页的用途</b>：GitHub 仓库页面无法插入自定义 META 标签，因此本页承载了
+    QQ 分享卡片所需的 <code>itemprop</code> 与 Open Graph 标签。在 QQ 中分享本页地址
+    （<code>https://kingyxs.github.io/MeshAudio/</code>）即可显示带标题、描述与卡片图的分享卡片。
+  </div>
+
+  <div class="foot">
+    自有代码以 <a href="https://github.com/kingyxs/MeshAudio/blob/main/LICENSE">GPL-3.0-or-later</a> 许可发布 ·
+    Windows · Android · iPhone AirPlay
+  </div>
+
+</div>
+</body>
+</html>
