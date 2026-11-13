@@ -1,0 +1,26 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.meshaudio.node'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.meshaudio.node'
+        minSdk 29
+        targetSdk 35
+        versionCode 301
+        versionName '0.3.1'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildTypes {
+        release { minifyEnabled false }
+    }
+    testOptions { unitTests.returnDefaultValues = true }
+}
+
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    testImplementation 'junit:junit:4.13.2'
+}

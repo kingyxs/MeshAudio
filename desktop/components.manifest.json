@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "note": "VB-CABLE is optional and downloaded on request. Native UxPlay is compiled from pinned upstream source; managed only through canvas AirPlay lines.",
+  "components": [
+    {
+      "id": "vb-cable",
+      "kind": "driver",
+      "names": {
+        "zh-CN": "VB-CABLE 虚拟音频设备",
+        "en-US": "VB-CABLE virtual audio device"
+      },
+      "summary": {
+        "zh-CN": "把混音结果写入一块虚拟声卡，供 Zoom、微信、OBS 等应用当作麦克风读取。驱动安装需要管理员权限，装完需重启。",
+        "en-US": "Publishes the mix through a virtual sound card that Zoom, Teams or OBS can read as a microphone. The driver needs administrator rights and a reboot."
+      },
+      "license": "Donationware · VB-Audio",
+      "homepage": "https://vb-audio.com/Cable/",
+      "download": {
+        "url": "https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack45.zip",
+        "filename": "VBCABLE_Driver_Pack45.zip",
+        "sha256": "b950e39f01af1d04ea623c8f6d8eb9b6ea5c477c637295fabf20631c85116bfb"
+      },
+      "install": {
+        "type": "zip-launch",
+        "entry": "VBCABLE_Setup_x64.exe",
+        "requiresRestart": true,
+        "publisher": "BUREL VINCENT"
+      }
+    },
+    {
+      "id": "bonjour",
+      "kind": "discovery",
+      "names": { "zh-CN": "Bonjour 局域网发现服务", "en-US": "Bonjour LAN discovery service" },
+      "summary": {
+        "zh-CN": "AirPlay 接收需要 Apple Bonjour 服务和 64 位 dnssd.dll。仅在选择后从 Apple 下载，官方安装器可能要求管理员确认；不会打包或复制 Apple 的运行库。",
+        "en-US": "AirPlay needs Apple Bonjour and 64-bit dnssd.dll. Downloaded from Apple only after selection; its installer may request administrator confirmation. Apple binaries are not bundled."
+      },
+      "license": "Proprietary · Apple Inc. (publisher installer terms)",
+      "homepage": "https://support.apple.com/en-us/106380",
+      "download": {
+        "url": "https://download.info.apple.com/Mac_OS_X/061-8098.20100603.gthyu/BonjourPSSetup.exe",
+        "filename": "BonjourPSSetup.exe",
+        "sha256": "7f1ec347cd429cfb25a34b2147e02231334f28290e0c28be213415b0f99da1a0"
+      },
+      "install": { "type": "exe", "publisher": "Apple Inc." }
+    },
+    {
+      "id": "uxplay",
+      "kind": "receiver",
+      "names": {
+        "zh-CN": "AirPlay 音频接收插件（原生 UxPlay）",
+        "en-US": "AirPlay audio receiver plugin (native UxPlay)"
+      },
+      "summary": {
+        "zh-CN": "随 MeshAudio 自动安装，无需另行下载或编译。点击“自动配置 AirPlay”会检查插件并自动下载安装缺少的 Bonjour；完成后在画布添加 iOS 源。Windows 可能要求管理员确认和允许专用网络访问。",
+        "en-US": "Installed automatically with MeshAudio; no separate download or compilation. Auto-setup checks the plugin and installs missing Bonjour. Then add an iOS source on the canvas. Windows may request administrator approval and private-network access."
+      },
+      "license": "GPL-3.0-or-later · UxPlay contributors",
+      "homepage": "https://github.com/antimof/UxPlay",
+      "install": {
+        "type": "bundled"
+      },
+      "requires": ["bonjour"],
+      "version": "1.73.6"
+    }
+  ]
+}

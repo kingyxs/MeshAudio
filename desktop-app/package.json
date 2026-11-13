@@ -1,0 +1,33 @@
+{
+  "name": "meshaudio-desktop",
+  "private": true,
+  "version": "0.3.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "check": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "prepare:resources": "node scripts/prepare-resources.mjs",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "@lucide/vue": "^1.66.0",
+    "@tauri-apps/api": "^2.0.0",
+    "pinia": "^2.3.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.0",
+    "vitest": "4.1.12",
+    "vue-tsc": "3.3.14"
+  },
+  "license": "GPL-3.0-or-later"
+}

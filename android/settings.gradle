@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        google()
+        if (System.getenv('MESHAUDIO_MAVEN_MIRROR')) maven { url System.getenv('MESHAUDIO_MAVEN_MIRROR') }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        if (System.getenv('MESHAUDIO_MAVEN_MIRROR')) maven { url System.getenv('MESHAUDIO_MAVEN_MIRROR') }
+        mavenCentral()
+    }
+}
+rootProject.name = 'MeshAudioAndroid'
+include ':app', ':test-player', ':device-driver'

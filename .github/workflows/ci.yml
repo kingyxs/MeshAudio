@@ -1,0 +1,78 @@
+name: MeshAudio CI
+on:
+  push:
+  pull_request:
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: android-actions/setup-android@v3
+      - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :test-player:assembleDebug :device-driver:assembleDebug
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: android-test-candidate-and-reports
+          path: |
+            android/app/build/outputs/apk/debug/*.apk
+            android/app/build/reports/
+          if-no-files-found: ignore
+  desktop:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node --check server.js
+      - run: node --check app.js
+      - run: node --check desktop/audio-engine.js
+      - run: npm test
+      - run: node tools/test-control-protocol.js
+      - run: npm run test:ws
+      - name: Optional component lifecycle (isolated, no driver install)
+        run: node tools/test-component-setup.js
+      - name: Bundled AirPlay prerequisites (isolated, no driver install)
+        run: node tools/test-bundled-airplay-setup.js
+      - run: node tools/test-components.js --skip-download
+      - name: Configure and build native helper
+        shell: pwsh
+        run: ./tools/build-native.ps1
+      - name: Native helper capability smoke test
+        shell: pwsh
+        run: ./desktop/native/build/meshaudio-native.exe --capabilities
+      - name: Native dropout recovery and isolation
+        shell: pwsh
+        run: ./desktop/native/build/meshaudio-mix-test.exe
+      - name: Install frontend dependencies
+        run: npm ci --prefix desktop-app
+      - name: Frontend types, interaction logic and production assets
+        shell: pwsh
+        run: |
+          npm run check --prefix desktop-app
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm test --prefix desktop-app
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run build --prefix desktop-app
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Drag connections and first-run guide in Edge
+        shell: pwsh
+        run: |
+          npm install --prefix .build-tools/ui-check --no-save playwright-core
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node tools/test-routing-setup-ui.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: routing-ui-evidence
+          path: docs/testing/routing/
+          if-no-files-found: ignore

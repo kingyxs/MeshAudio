@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "MeshAudio",
+  "version": "0.3.1",
+  "identifier": "com.meshAudio.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build && npm run prepare:resources",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "MeshAudio · 音频路由",
+        "width": 1400,
+        "height": 900,
+        "minWidth": 980,
+        "minHeight": 640,
+        "decorations": true,
+        "resizable": true,
+        "center": true,
+        "backgroundColor": "#0A0A0D"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src ipc: http://ipc.localhost http://127.0.0.1:* ws://127.0.0.1:*; style-src 'self' 'unsafe-inline'; img-src 'self' asset: data:; font-src 'self' data:"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis",
+      "msi"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "publisher": "MeshAudio",
+    "copyright": "© 2026 MeshAudio Contributors. GPL-3.0-or-later.",
+    "category": "Utility",
+    "shortDescription": "局域网音频路由与混音",
+    "longDescription": "MeshAudio 把手机麦克风与系统音频通过局域网送到电脑，提供可视化路由画布、多通道混音、语音增强与虚拟麦克风输出。",
+    "licenseFile": "../../LICENSE",
+    "resources": {
+      "resources/node.exe": "resources/meshaudio-runtime/node.exe",
+      "resources/package.json": "resources/meshaudio-runtime/package.json",
+      "../../server.js": "resources/meshaudio-runtime/server.js",
+      "../../desktop/audio-engine.js": "resources/meshaudio-runtime/desktop/audio-engine.js",
+      "../../desktop/native-bridge.js": "resources/meshaudio-runtime/desktop/native-bridge.js",
+      "../../desktop/engine-output.js": "resources/meshaudio-runtime/desktop/engine-output.js",
+      "../../desktop/component-manager.js": "resources/meshaudio-runtime/desktop/component-manager.js",
+      "../../desktop/components.manifest.json": "resources/meshaudio-runtime/desktop/components.manifest.json",
+      "../../desktop/airplay-bridge.js": "resources/meshaudio-runtime/desktop/airplay-bridge.js",
+      "../../desktop/airplay-manager.js": "resources/meshaudio-runtime/desktop/airplay-manager.js",
+      "../../desktop/native/build/meshaudio-native.exe": "resources/meshaudio-runtime/desktop/native/build/meshaudio-native.exe",
+      "../../browser-node.html": "resources/meshaudio-runtime/browser-node.html",
+      "../../browser-node.js": "resources/meshaudio-runtime/browser-node.js",
+      "../../desktop/web-microphone-gateway.js": "resources/meshaudio-runtime/desktop/web-microphone-gateway.js",
+      "../../desktop/network-addresses.js": "resources/meshaudio-runtime/desktop/network-addresses.js",
+      "../../desktop/airplay/uxplay.exe": "resources/meshaudio-runtime/desktop/airplay/uxplay.exe",
+      "../../desktop/airplay/*.dll": "resources/meshaudio-runtime/desktop/airplay/",
+      "../../desktop/airplay/lib/": "resources/meshaudio-runtime/desktop/airplay/lib/",
+      "../../desktop/airplay/licenses/": "resources/meshaudio-runtime/desktop/airplay/licenses/",
+      "../../desktop/airplay/UXPLAY-LICENSE": "resources/meshaudio-runtime/desktop/airplay/UXPLAY-LICENSE",
+      "../../desktop/airplay/build-info.json": "resources/meshaudio-runtime/desktop/airplay/build-info.json",
+      "../../desktop/airplay/sources/UxPlay-meshaudio-source.tar.gz": "resources/meshaudio-runtime/desktop/airplay/sources/UxPlay-meshaudio-source.tar.gz",
+      "../../desktop/airplay/sources/dependencies.json": "resources/meshaudio-runtime/desktop/airplay/sources/dependencies.json",
+      "../../SOURCE-NOTICE.txt": "SOURCE-NOTICE.txt",
+      "resources/licenses/": "licenses/"
+    },
+    "windows": {
+      "webviewInstallMode": {
+        "type": "embedBootstrapper"
+      },
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": [
+          "SimpChinese",
+          "English"
+        ],
+        "displayLanguageSelector": false,
+        "installerIcon": "icons/icon.ico",
+        "startMenuFolder": "MeshAudio",
+        "compression": "lzma"
+      }
+    }
+  }
+}

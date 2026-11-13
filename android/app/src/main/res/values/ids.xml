@@ -1,0 +1,12 @@
+<resources>
+    <item name="desktop_host" type="id" />
+    <item name="discovery_port" type="id" />
+    <item name="control_port" type="id" />
+    <item name="transport_mode" type="id" />
+    <item name="save_connection" type="id" />
+    <item name="probe_desktop" type="id" />
+    <item name="toggle_microphone" type="id" />
+    <item name="toggle_media" type="id" />
+    <item name="stop_all" type="id" />
+    <item name="open_help" type="id" />
+</resources>

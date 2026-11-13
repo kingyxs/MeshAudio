@@ -1,0 +1,35 @@
+'use strict';
+const assert = require('assert/strict');
+const { EventEmitter } = require('events');
+const fs = require('fs'), os = require('os'), path = require('path');
+const { createAirplayManager } = require('../desktop/airplay-manager');
+const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'meshaudio-presence-'));
+const children = [], events = [];
+const manager = createAirplayManager({ root: path.resolve(__dirname, '..'), dataDir: dir, onConnection: (line, online) => events.push(online), spawn: (file, args) => {
+  const child = new EventEmitter(); child.stdout = new EventEmitter(); child.stderr = new EventEmitter(); child.pid = 100 + children.length; child.killed = false;
+  child.kill = () => { child.killed = true; child.emit('exit', 0); };
+  children.push(child);
+  setImmediate(() => child.stdout.emit('data', Buffer.from(args[0]?.endsWith('airplay-bridge.js') ? 'listening for PCM\n' : 'Initialized server socket\n')));
+  return child;
+} });
+(async () => {
+  const line = manager.add(); await manager.start(line.id);
+  const bridge = children[0], receiver = children[1];
+  receiver.stdout.emit('data', Buffer.from('Remote: 192.168.1.22\n'));
+  assert.equal(manager.list()[0].connected, false, 'RTSP probes are not negotiated sessions');
+  receiver.stdout.emit('data', Buffer.from('MESHAUDIO_SESSION con'));
+  receiver.stdout.emit('data', Buffer.from('nected id=00abc ip=192.168.1.22\n'));
+  assert.equal(manager.list()[0].connected, true);
+  assert.equal(manager.list()[0].remoteIp, '192.168.1.22');
+  bridge.stdout.emit('data', Buffer.from('receiver connected\nreceiver disconnected\n'));
+  await new Promise(resolve => setTimeout(resolve, 3200));
+  assert.equal(manager.list()[0].connected, true, 'silence/PCM restart must preserve negotiated connection');
+  assert.equal(manager.list()[0].receiving, false);
+  receiver.stdout.emit('data', Buffer.from('MESHAUDIO_SESSION connected id=00abd ip=192.168.1.22\nMESHAUDIO_SESSION disconnected id=00abc ip=192.168.1.22\n'));
+  assert.equal(manager.list()[0].connected, true, 'remaining negotiated session is still connected');
+  receiver.stdout.emit('data', Buffer.from('MESHAUDIO_SESSION disconnected id=00abd ip=192.168.1.22\n'));
+  assert.equal(manager.list()[0].connected, false);
+  assert.equal(manager.list()[0].remoteIp, null);
+  assert.deepEqual(events, [true, true, true, false]);
+  console.log('PASS AirPlay session presence: probes, split logs, 3-second silence, PCM restart, multiple sessions, disconnect');
+})().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => { manager.stopAll(); fs.rmSync(dir, { recursive: true, force: true }); });

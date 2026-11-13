@@ -1,0 +1,7 @@
+{
+  "upstream": "https://github.com/antimof/UxPlay",
+  "version": "1.73.6",
+  "commit": "fd88c0c465df492e03461980bedf115a40bc835a",
+  "modified": true,
+  "patch": "uxplay-meshaudio.patch"
+}

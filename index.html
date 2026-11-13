@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MeshAudio · 音频路由</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">M</div><div><strong>MeshAudio</strong><span>局域网音频路由</span></div></div>
+    <div class="top-actions"><div class="connection"><i></i><span>本机服务运行中</span></div><button class="icon-btn" title="设置">⚙</button><button class="avatar">A</button></div>
+  </header>
+  <main class="shell">
+    <section class="intro"><div><p class="eyebrow">ROUTING CONSOLE</p><h1>音频路由画布</h1><p class="sub">拖拽节点之间的连接，实时组织局域网内的音频流。</p></div><div class="intro-actions"><button class="secondary" id="scanBtn"><span>⌁</span> 扫描设备</button><button class="primary" id="addBusBtn"><span>＋</span> 新建输出通道</button></div></section>
+    <section class="stats"><div><span>在线来源</span><b id="sourceCount">3</b><em class="up">+1 本周</em></div><div><span>活动通道</span><b id="busCount">2</b><em>稳定</em></div><div><span>路由连接</span><b id="routeCount">5</b><em>实时</em></div><div><span>系统延迟</span><b>42<small> ms</small></b><em class="good">低延迟</em></div></section>
+    <section class="workspace">
+      <div class="canvas-head"><div><strong>路由画布</strong><span>来源 → 混音通道 → 外部输出</span></div><div class="legend"><span><i class="dot online"></i>在线</span><span><i class="dot idle"></i>待机</span><span><i class="dot offline"></i>离线</span></div></div>
+      <div class="canvas" id="canvas">
+        <svg class="wires" id="wires" aria-hidden="true"></svg>
+        <div class="col sources"><div class="col-title"><span>音频来源</span><small id="sourceLabel">3 个来源</small></div><div id="sourceNodes"></div></div>
+        <div class="col buses"><div class="col-title"><span>输出通道</span><small id="busLabel">2 个通道</small></div><div id="busNodes"></div></div>
+        <div class="col outputs"><div class="col-title"><span>外部输出 / 监听</span><small>系统设备</small></div><div id="outputNodes"></div></div>
+        <div class="canvas-help"><span>拖拽节点右侧圆点连接到下一列节点</span><span>·</span><span>点击连线可删除</span></div>
+      </div>
+    </section>
+    <section class="bottom-grid"><div class="activity panel"><div class="panel-head"><strong>实时活动</strong><button class="text-btn">查看全部</button></div><div id="activityList"></div></div><div class="health panel"><div class="panel-head"><strong>系统状态</strong><span class="healthy"><i></i>运行正常</span></div><div class="health-row"><span>音频引擎</span><b>正常</b><i class="bar"><u style="width:94%"></u></i></div><div class="health-row"><span>局域网连接</span><b>良好</b><i class="bar"><u style="width:88%"></u></i></div><div class="health-row"><span>输出设备</span><b>1 个可用 · 1 个待验证</b><i class="bar"><u style="width:50%"></u></i></div></div></section>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
+

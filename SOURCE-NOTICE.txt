@@ -1,0 +1,30 @@
+MeshAudio 0.3.1 — source and licence notice
+
+MeshAudio is free software under GNU GPL version 3 or later, without warranty.
+Third-party components retain their own licences. Full licence texts and the
+npm/Rust/runtime inventory are installed under licenses/.
+
+The matching public source release is MeshAudio-0.3.1-source.zip.
+The complete dependency source bundle is
+MeshAudio-0.3.1-third-party-sources.tar.gz.
+Publish both beside this version's Windows installer, with SHA256SUMS.txt.
+Do not publish the installer alone or substitute sources from another version.
+
+The dependency bundle contains exact MSYS2 complete source packages (upstream
+source archives, build recipes and distribution patches), UxPlay source and
+MeshAudio changes, the minimal AAC/ALAC build scripts, and MPL Rust crates.
+For each installed AirPlay binary, see resources/meshaudio-runtime/desktop/
+airplay/build-info.json and sources/dependencies.json for versions, source
+URLs and SHA-256. The UxPlay source snapshot is also installed in that folder.
+For npm/Rust components see licenses/inventory.json, package-lock.json and
+Cargo.lock in the source release. GCC support libraries retain the GCC Runtime
+Library Exception. Dynamically linked LGPL libraries may be replaced with
+compatible modified versions for debugging such modifications.
+
+Build and rebuild instructions: docs/PUBLIC-BUILD.md and
+docs/THIRD-PARTY-SOURCES.md in the matching source release.
+Source archives must remain available with every publicly distributed binary.
+
+VB-CABLE and Apple Bonjour are proprietary optional system components. They
+are not part of these binary/source bundles. They are downloaded directly from
+their publishers only after selection and remain subject to publisher terms.

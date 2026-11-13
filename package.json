@@ -1,0 +1,29 @@
+{
+  "name": "meshaudio-desktop",
+  "version": "0.3.1",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "node desktop/audio-engine.test.js && node desktop/native-bridge.test.js && node desktop/engine-output.test.js",
+    "test:protocol": "node tools/test-control-protocol.js",
+    "test:ws": "node tools/test-ws-suite.js",
+    "test:browser": "node tools/test-browser-audio-ws.js",
+    "test:airplay": "node tools/test-airplay-bridge.js",
+    "test:airplay-lines": "node tools/test-airplay-lines.js",
+    "build:airplay": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-uxplay.ps1",
+    "test:components": "node tools/test-components.js",
+    "test:all": "npm test && npm run test:protocol && npm run test:ws && npm run test:airplay-lines && npm run test:presence",
+    "build:native": "powershell -ExecutionPolicy Bypass -File tools/build-native.ps1",
+    "test:presence": "node tools/test-airplay-presence.js",
+    "test:source-regression": "node tools/test-source-lifecycle.js",
+    "test:airplay-ui": "node tools/test-airplay-ui.js",
+    "test:packaged": "node tools/test-packaged-airplay.js",
+    "test:audio-telemetry": "node tools/test-audio-telemetry.js",
+    "test:component-setup": "node tools/test-component-setup.js && node tools/test-bundled-airplay-setup.js",
+    "test:routing-ui": "node tools/test-routing-setup-ui.js",
+    "test:codecs": "node tools/test-minimal-codecs.js",
+    "prepare:sources": "node tools/prepare-airplay-sources.js",
+    "export:source": "node tools/export-public-source.js"
+  },
+  "license": "GPL-3.0-or-later"
+}

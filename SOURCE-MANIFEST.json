@@ -1,0 +1,1481 @@
+{
+  "version": "0.3.1",
+  "generatedAt": "2026-11-13T20:27:32.582Z",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 1807,
+      "sha256": "ccb06570402093113382d60a89c662f1ad95033c4e0fb3deab14f3d94c1397e9"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 319,
+      "sha256": "c3c0ca726ff06efe4e66a18af78fbc2d68062d739e0bc32d2cc70b0a36aceb10"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8621,
+      "sha256": "172a8bd13cae0ccf60dbc2403c79b4746de3a592e64f33461a5b8b69077c8048"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35823,
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "bytes": 3418,
+      "sha256": "1c2bbdc9a91da9298aa7e0ff3d4632dbb2cf1240aa17b8588dca26adadbff003"
+    },
+    {
+      "path": "SOURCE-NOTICE.txt",
+      "bytes": 1748,
+      "sha256": "4d19ebcb66f3751693ccb34d80cc31961eb820adbd72f1292f4eac52e4a10e1b"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 4046,
+      "sha256": "02d377f54d4c0c4682bc7292401527e4961d6f63f505fd401fa458bd3c524966"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 621,
+      "sha256": "6f6775fed0562ed9f0a7b30ee858b3f58dc58fc3bce0a34e8b3a6a369885a121"
+    },
+    {
+      "path": "CLA.md",
+      "bytes": 10787,
+      "sha256": "1b89ccb4b84d277f8bc207d5be67baf074e6c34f4868450f999f345efc9bf7e2"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1598,
+      "sha256": "bba2d63143069834619784dc5dbcb6e04d389af9fc1ad7c5a5a8c651f8382304"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 234,
+      "sha256": "040d95bac679d0474c7c28ae6bb6d7fd9a595dc3a5d917e7a4d35b1b2f4d963d"
+    },
+    {
+      "path": "server.js",
+      "bytes": 75286,
+      "sha256": "9d00b2c645afecb428f0c5a15a33c9267fdf2d89c9acd29033f20310982c8803"
+    },
+    {
+      "path": "app.js",
+      "bytes": 12344,
+      "sha256": "8885585eadb681889dda7a22f82ef5e8d58904778666815009c7d2a24d5e360e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3296,
+      "sha256": "a5add3a82877be82b84faf3d539b1ccccc98838f0437bb50f7db687ba4a3c4a5"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 8158,
+      "sha256": "9f6757ef212b9248da25824799f9f6601d883900b3931552d9f3c539f8cb7568"
+    },
+    {
+      "path": "browser-node.html",
+      "bytes": 5459,
+      "sha256": "cab89d573111307e70cde249b0a37a641750532a249a7c7ccac889f8c82c0a5b"
+    },
+    {
+      "path": "browser-node.js",
+      "bytes": 13738,
+      "sha256": "822b9df21b876b7c56f7199f71b53b170075a16348cf4fa51b76f9143766df59"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "bytes": 1597,
+      "sha256": "fa6e0febcce4a5edc943a862b04054c4cb98ac4484453a27ea9eb7ae67f221ce"
+    },
+    {
+      "path": "LICENSES/MeshAudio-original-MIT.txt",
+      "bytes": 1079,
+      "sha256": "9f8ba855413b04321476658220aaa14780e210f8ad703920aa2880b0c5e1bbad"
+    },
+    {
+      "path": "LICENSES/Node.js-LICENSE.txt",
+      "bytes": 156386,
+      "sha256": "8e603aa87c70d36e497004f0dec63111511cb61b7d65ace12e10ea791599286c"
+    },
+    {
+      "path": "LICENSES/qrcode-generator-MIT.txt",
+      "bytes": 1071,
+      "sha256": "3a850fa5f08101db6f40676c2786e10bd2cd5fff7b12ffdf1e0c434d4e49d90c"
+    },
+    {
+      "path": "LICENSES/README.md",
+      "bytes": 917,
+      "sha256": "f8c8bbb0ebca0e846a6340568578ff362779967789e38788946e111adf1b3d7c"
+    },
+    {
+      "path": "LICENSES/standard/Apache-2.0.txt",
+      "bytes": 10280,
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    {
+      "path": "LICENSES/standard/BSD-2-Clause.txt",
+      "bytes": 1267,
+      "sha256": "f32fb3b417a194167cfad068223fc975ba96c5960513a10f66a3c28720aec1df"
+    },
+    {
+      "path": "LICENSES/standard/BSD-3-Clause.txt",
+      "bytes": 1460,
+      "sha256": "5a93d5831e1297ab10fe643e1a631e83be392896da14ee2951285a79012df69d"
+    },
+    {
+      "path": "LICENSES/standard/BSL-1.0.txt",
+      "bytes": 1338,
+      "sha256": "84c6ef3ea9e3254a54d0acf5d3e0c61ae011b8fef7dd6940591cf060e6380a8f"
+    },
+    {
+      "path": "LICENSES/standard/CC0-1.0.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "LICENSES/standard/ISC.txt",
+      "bytes": 737,
+      "sha256": "521c6f0ed8e64736684f89843d16a4df6b4b7449acbcfc6ca6630a3037ca8c53"
+    },
+    {
+      "path": "LICENSES/standard/MIT.txt",
+      "bytes": 1078,
+      "sha256": "b05785f9f18e6716bab63424b11454513b9943a222595b70411009202fc592b5"
+    },
+    {
+      "path": "LICENSES/standard/MPL-2.0.txt",
+      "bytes": 16727,
+      "sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172"
+    },
+    {
+      "path": "LICENSES/standard/Unicode-3.0.txt",
+      "bytes": 1995,
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    {
+      "path": "LICENSES/standard/Unlicense.txt",
+      "bytes": 1211,
+      "sha256": "0bdebfeda07d45dada625ae1317c6f833186e798b171d0db640bcf32e92a8240"
+    },
+    {
+      "path": "LICENSES/standard/Zlib.txt",
+      "bytes": 838,
+      "sha256": "bfb1112d49db5b1daecdfef24bd7e2f3ea0bafb33aa67aa0ab51e2bf8407c03d"
+    },
+    {
+      "path": "LICENSES/vue-devtools-MIT.txt",
+      "bytes": 1083,
+      "sha256": "050bbca6960784db52ff387271bf2ecc5cbed7cf8581b415d528a6ecb6585015"
+    },
+    {
+      "path": "protocol/README.md",
+      "bytes": 3478,
+      "sha256": "7c3ed4665690be87b89de814ef2a3526c995c61c1ef280998e52d0668a353be2"
+    },
+    {
+      "path": "contributors/README.md",
+      "bytes": 3214,
+      "sha256": "7b4954f01aed70fb258e5b9d22e2722d336bce1449f613779a01cd3c6104cce9"
+    },
+    {
+      "path": "contributors/SIGNATURE-TEMPLATE.md",
+      "bytes": 1060,
+      "sha256": "ef20e48f3fcfb2de99ddd9d9907cec1a7f49c3b9ec91ce6fc93a449ef07dc99e"
+    },
+    {
+      "path": "contributors/signatures/README.md",
+      "bytes": 532,
+      "sha256": "710997463618bfa363ee923c3cbd8371872e0fcbaa41ab2e1036dae325cd48e4"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 2900,
+      "sha256": "c0edf1ee4a0fa0e5b6a3a279ce6ace792ac42e83e170d94b6359f019720ac9fa"
+    },
+    {
+      "path": "desktop-app/src/api/control.ts",
+      "bytes": 2568,
+      "sha256": "014cc243c9ecf86c189d904604945999dcae4e09562da79b40f94b0bd3c2cd55"
+    },
+    {
+      "path": "desktop-app/src/App.vue",
+      "bytes": 4457,
+      "sha256": "e5854c84024c6ad8ddffea1e5a696c775858cac64eb5263aedc1ed6f3448812a"
+    },
+    {
+      "path": "desktop-app/src/components/AddSourceDialog.vue",
+      "bytes": 9258,
+      "sha256": "d8477585cb0876430720340fa403cf3977f50b96aa7d67cbc323320205e515a0"
+    },
+    {
+      "path": "desktop-app/src/components/AirplayLinesDialog.vue",
+      "bytes": 14367,
+      "sha256": "3d0d8a2b43fd8e440d73532d57f4ce11acbe486d1b0a15f565e5f30afc07d998"
+    },
+    {
+      "path": "desktop-app/src/components/AppIcon.vue",
+      "bytes": 1426,
+      "sha256": "37e0cbd983f7cd3ada65ad036f1380be0bf2b132cb9a1b298431605494a22502"
+    },
+    {
+      "path": "desktop-app/src/components/BusNode.vue",
+      "bytes": 3936,
+      "sha256": "0b117ddfbc248120d9872e7d574229da94fa7f900df6d8bafdc54337162b3999"
+    },
+    {
+      "path": "desktop-app/src/components/NewSourceDialog.vue",
+      "bytes": 2346,
+      "sha256": "966492a2875232eb42db72b0cf56b1244d61d7e805bb06ec84dece31f03d2397"
+    },
+    {
+      "path": "desktop-app/src/components/OutputNode.vue",
+      "bytes": 2321,
+      "sha256": "8f63961a580389cb0c238fb91e4271f051d1823fcb7abfa2f496ed2db5c1c440"
+    },
+    {
+      "path": "desktop-app/src/components/RoutingCanvas.vue",
+      "bytes": 23627,
+      "sha256": "47eff436487ea458e81425f65e2f55edaf77ea1ccb7846dbfc7d42a3e0bda5bc"
+    },
+    {
+      "path": "desktop-app/src/components/SettingsPage.vue",
+      "bytes": 19802,
+      "sha256": "c1f6ca948093303b3902b46e48127ca75127865d8994b54ee5b6e7430f507e3a"
+    },
+    {
+      "path": "desktop-app/src/components/SetupWizard.vue",
+      "bytes": 10369,
+      "sha256": "89d250ff6b6273c55e4d29e4ca70d456ec037714b64ca7870bf2e302f3d686bf"
+    },
+    {
+      "path": "desktop-app/src/components/SourceNode.vue",
+      "bytes": 5235,
+      "sha256": "1b4f340b3a461d54945214d127220804a579560f1a06e7e5ea637eedb04dd8ec"
+    },
+    {
+      "path": "desktop-app/src/i18n/index.test.ts",
+      "bytes": 2444,
+      "sha256": "f9bbe4e7c7e3a6c13636ea7042ee6a41e6dcdbfe21bf73991d89d9c33f477ac7"
+    },
+    {
+      "path": "desktop-app/src/i18n/index.ts",
+      "bytes": 2457,
+      "sha256": "0a30a175f5a954858f28c0427558b453bccdc1a57dfe60360bd0fe8241ba781b"
+    },
+    {
+      "path": "desktop-app/src/i18n/messages.ts",
+      "bytes": 26073,
+      "sha256": "e400e43fa4163e5a14a48f94f8015abaffb1ccc536b3a86b8f54d06b66664a51"
+    },
+    {
+      "path": "desktop-app/src/lib/canvas-layout.test.ts",
+      "bytes": 1069,
+      "sha256": "efb221a267b0b7dc3bfeefaf9c0b6905feb124c49d1c35d6b2e2a8134b12efea"
+    },
+    {
+      "path": "desktop-app/src/lib/canvas-layout.ts",
+      "bytes": 753,
+      "sha256": "bd2f1f8928c7cad0c714a0523c62be9897d3a0a9c9cfe3146a5719ca25348c5c"
+    },
+    {
+      "path": "desktop-app/src/lib/components.ts",
+      "bytes": 777,
+      "sha256": "6a5a0620383d7410fed82cab60d70c8f2436b3c6b5f7ec2ee62ffcdec0044838"
+    },
+    {
+      "path": "desktop-app/src/lib/routing.test.ts",
+      "bytes": 1217,
+      "sha256": "8c4edd5b1c5ddae4df234f876cbd9426ff1acad7712dbf8a16f6fb9ccb35de75"
+    },
+    {
+      "path": "desktop-app/src/lib/routing.ts",
+      "bytes": 1515,
+      "sha256": "a37873ce43a2cefc4235cf84ba3c43c53a9947cfc5f690e626ba4b984723cab9"
+    },
+    {
+      "path": "desktop-app/src/lib/types.ts",
+      "bytes": 1435,
+      "sha256": "065fa56e4adf531eed489f8db6b750b3d51eb65eb487f6f3134a8254d390e9f0"
+    },
+    {
+      "path": "desktop-app/src/lib/version.ts",
+      "bytes": 368,
+      "sha256": "e5f22c31ac948c60474d86c24e06e56201254fe485589a98d65e728da1e952ca"
+    },
+    {
+      "path": "desktop-app/src/main.ts",
+      "bytes": 2043,
+      "sha256": "d0ce7c7853ab51601b48f2be25958ffa52a8eb42e6d37490d01c493b3cf0447b"
+    },
+    {
+      "path": "desktop-app/src/stores/audio.test.ts",
+      "bytes": 4403,
+      "sha256": "aa2754956a1e916f5b92c18beae74f20e7718081a42498d6f75cbaaa711928d1"
+    },
+    {
+      "path": "desktop-app/src/stores/audio.ts",
+      "bytes": 17206,
+      "sha256": "bb30e14a410bfd2bcc66e195a4c431a3d34302f76809b3704f3e7403245fe25a"
+    },
+    {
+      "path": "desktop-app/src/styles.css",
+      "bytes": 24680,
+      "sha256": "2dfe9cf86e488619e87c38362dbbe6f11915f1478c65c91bf3da6eea0d3ba0cf"
+    },
+    {
+      "path": "desktop-app/public/vendor/qrcode-generator.js",
+      "bytes": 56694,
+      "sha256": "79ec86f82856005b1c887905cfccfcfbec3821ca61c7fd5a952faa5f778f791c"
+    },
+    {
+      "path": "desktop-app/scripts/build-tauri.ps1",
+      "bytes": 1791,
+      "sha256": "3c11055eea4b1afcd3a58ea38ec796e289c75daa6a6a28985f419f9c6003a7b8"
+    },
+    {
+      "path": "desktop-app/scripts/prepare-resources.mjs",
+      "bytes": 3070,
+      "sha256": "e400a19d024ea2ae2f102d0485ff2d24c61be77eecdf786facd7fe8f18445b28"
+    },
+    {
+      "path": "desktop-app/src-tauri/src/lib.rs",
+      "bytes": 5399,
+      "sha256": "c5902dfb59bf6cac4fd0e2701a166d876347ed933b161ec2eadfaeff0da78282"
+    },
+    {
+      "path": "desktop-app/src-tauri/src/main.rs",
+      "bytes": 116,
+      "sha256": "59104bfa4f765350628d65a56326076932861329f795539c301992a584c21712"
+    },
+    {
+      "path": "desktop-app/src-tauri/src/sidecar.rs",
+      "bytes": 33964,
+      "sha256": "30137d7c167ec71d618811ec13cd5bd44414867c71223661e6036d114c0b974e"
+    },
+    {
+      "path": "desktop-app/src-tauri/.cargo/config.toml",
+      "bytes": 81,
+      "sha256": "53329a3ce3b81a3bcb1c083a46a8d47a09a459b457c8f2f5441fd13d9445d8b3"
+    },
+    {
+      "path": "desktop-app/src-tauri/icons/128x128.png",
+      "bytes": 5789,
+      "sha256": "75b287e9d896d18ee1888acc2d76a47c23150d037b86310a056f2b183d364257"
+    },
+    {
+      "path": "desktop-app/src-tauri/icons/128x128@2x.png",
+      "bytes": 10468,
+      "sha256": "518c102ef6a7a3ae9ef149b7b44e5ba284759d38ea43164974ffe4f6c026a06f"
+    },
+    {
+      "path": "desktop-app/src-tauri/icons/32x32.png",
+      "bytes": 1524,
+      "sha256": "c79c654fe8ae1a9b3bc55a0eeadf24ef3d9baa34e9b3fef2fb2921a585246d2b"
+    },
+    {
+      "path": "desktop-app/src-tauri/icons/icon.ico",
+      "bytes": 25101,
+      "sha256": "5ce7dccb417dc0b9c52fd82458a8d2a9eb96fc3d57691307b1e077193ff41956"
+    },
+    {
+      "path": "desktop-app/src-tauri/icons/icon.png",
+      "bytes": 11284,
+      "sha256": "1ec83dfef7cb2d75d47eb251461636407527381446700469142c91f67412408c"
+    },
+    {
+      "path": "desktop-app/src-tauri/icons/tray-icon.png",
+      "bytes": 2947,
+      "sha256": "01ccd625db0a6183eb56d54e606915c92c84451f111ec8b26364e34ea9ae6285"
+    },
+    {
+      "path": "desktop-app/src-tauri/capabilities/default.json",
+      "bytes": 329,
+      "sha256": "d1980fc89cc6143cb3a2e6914c7746f00ea96c9c54954899be2fa4185e4fb961"
+    },
+    {
+      "path": "third_party/UxPlay/.gitignore",
+      "bytes": 16,
+      "sha256": "a1fcdb1bd8b31c8cb550e1f00fc695d8d32a9d4e4b089be9d725fd13daa8d6bb"
+    },
+    {
+      "path": "third_party/UxPlay/Bluetooth_LE_beacon/uxplay-beacon.1",
+      "bytes": 1813,
+      "sha256": "69b41d0c683e7b3f72842e2b5aa815a7a0914819ccdac1f3eabe68877f30fe28"
+    },
+    {
+      "path": "third_party/UxPlay/Bluetooth_LE_beacon/uxplay-beacon.py",
+      "bytes": 18219,
+      "sha256": "7dcaebaa2b61da14d879a3c01e1defe8b87d1b56e0bec35c51ece67a183f1507"
+    },
+    {
+      "path": "third_party/UxPlay/Bluetooth_LE_beacon/uxplay_beacon_module_BleuIO.py",
+      "bytes": 7533,
+      "sha256": "d86747bce2e6d2920995f53cf0cf40847475a7064442c4377acb7f678708f61a"
+    },
+    {
+      "path": "third_party/UxPlay/Bluetooth_LE_beacon/uxplay_beacon_module_BlueZ.py",
+      "bytes": 7869,
+      "sha256": "9e462619715001d99d1564e7c918caadd0006f499532fb0d0c638343fce7860d"
+    },
+    {
+      "path": "third_party/UxPlay/Bluetooth_LE_beacon/uxplay_beacon_module_HCI.py",
+      "bytes": 9695,
+      "sha256": "b6ec4b2930eab62850968902b651019a87709ec7de2e836a29fbc44ec799d9ee"
+    },
+    {
+      "path": "third_party/UxPlay/Bluetooth_LE_beacon/uxplay_beacon_module_winrt.py",
+      "bytes": 4740,
+      "sha256": "8d5ddc46972dc3e1023d75c781214c4d1e5ceebb8f93941d6d939953a491d233"
+    },
+    {
+      "path": "third_party/UxPlay/CMakeLists.txt",
+      "bytes": 3726,
+      "sha256": "aea53d5154034fcb904fcce2072ce5d425edd1842caf2bcff7999133bfd78148"
+    },
+    {
+      "path": "third_party/UxPlay/cmake_uninstall.cmake.in",
+      "bytes": 878,
+      "sha256": "1464c76d54305ed2ff28e682549a5e9976d06aae2c1a4358f039094bea4766bf"
+    },
+    {
+      "path": "third_party/UxPlay/lib/airplay_video.c",
+      "bytes": 31386,
+      "sha256": "27ea69dcd1c5cc7f507bca68d82bccab23a0416f59f02fc54a4b2f27629dea26"
+    },
+    {
+      "path": "third_party/UxPlay/lib/airplay_video.h",
+      "bytes": 4729,
+      "sha256": "d68b4986d561a94b9528fddfb041da96e0db7801c310d0005ee1198ae8faba70"
+    },
+    {
+      "path": "third_party/UxPlay/lib/byteutils.c",
+      "bytes": 4319,
+      "sha256": "65eca9cef1455bbd396ae19f18b8421a19142446aeb7732efb8501b885dd8dd1"
+    },
+    {
+      "path": "third_party/UxPlay/lib/byteutils.h",
+      "bytes": 1438,
+      "sha256": "7f8c6f95c47e3aff446fcdde074c9fe2529897369f150fed1f3145cf14fe3ca6"
+    },
+    {
+      "path": "third_party/UxPlay/lib/CMakeLists.txt",
+      "bytes": 7488,
+      "sha256": "e17739ae2d4db47cd4dc0abe78c8a51b6419999d0c00f2d0c8432c8a3593f9bf"
+    },
+    {
+      "path": "third_party/UxPlay/lib/compat.c",
+      "bytes": 1264,
+      "sha256": "ff16304266fd355a7c0e52fb69ffe083435f884d29386c1ce3873ec1d2a763f9"
+    },
+    {
+      "path": "third_party/UxPlay/lib/compat.h",
+      "bytes": 1056,
+      "sha256": "da3518892d952614878e0149ee25017f2087bfd142d9a231e12b4c269b877597"
+    },
+    {
+      "path": "third_party/UxPlay/lib/crypto.c",
+      "bytes": 17691,
+      "sha256": "3912b4630cb3718e182224ca4f94770cfc2df00f73d17da2cce875a5ee4718fe"
+    },
+    {
+      "path": "third_party/UxPlay/lib/crypto.h",
+      "bytes": 4656,
+      "sha256": "dabb48066c85eba1d59eb0805161dfabac5f23e35ab117e4bb3e687ae45c74c9"
+    },
+    {
+      "path": "third_party/UxPlay/lib/dnssd.c",
+      "bytes": 18287,
+      "sha256": "9658c386c67360c265793d9bef656ccb57cfc554824d8a6255af087020ffa6c8"
+    },
+    {
+      "path": "third_party/UxPlay/lib/dnssd.h",
+      "bytes": 1987,
+      "sha256": "92ab5ea23b5d166258090d2c08e7209b4407a78308d626f0c4cdb2d1a79b3076"
+    },
+    {
+      "path": "third_party/UxPlay/lib/dnssdint.h",
+      "bytes": 2195,
+      "sha256": "4f7d16620525ea035947e9503581d1bc618b2368497bc1fc0014261e94ae8710"
+    },
+    {
+      "path": "third_party/UxPlay/lib/fairplay.h",
+      "bytes": 1077,
+      "sha256": "0df6926b53b74b2f9dd511695a55859c13b2bc7f3f889689e4f6c9de6dbd5685"
+    },
+    {
+      "path": "third_party/UxPlay/lib/fairplay_playfair.c",
+      "bytes": 5107,
+      "sha256": "772fde4a79f460f28db7d8f12a788b8669936ffd7b1de6af692d7d93a6c9963e"
+    },
+    {
+      "path": "third_party/UxPlay/lib/fcup_request.h",
+      "bytes": 5181,
+      "sha256": "27a0cf7fd82b030e011d965b7060437936dfaa4fddeaa1b849fec179d6be125c"
+    },
+    {
+      "path": "third_party/UxPlay/lib/global.h",
+      "bytes": 1157,
+      "sha256": "190a1976d4e88b6e02aac2cb67b0e71a3ca6a71a67aeeb01aa7c20b7c467aa4a"
+    },
+    {
+      "path": "third_party/UxPlay/lib/httpd.c",
+      "bytes": 26447,
+      "sha256": "e6a6fab2f40925d3afa3d16660d7bb8330c7190f7ee63ed85991d1b118c419fa"
+    },
+    {
+      "path": "third_party/UxPlay/lib/httpd.h",
+      "bytes": 2268,
+      "sha256": "1fb313e368c050fb5ca6c18be8ab498e71d84fe853c03e41ba087001d6475b67"
+    },
+    {
+      "path": "third_party/UxPlay/lib/http_handlers.h",
+      "bytes": 45668,
+      "sha256": "076023856f9f4f18fa68feaf4f10fecaaa9349b06e664b7eeb6c4501ec97001d"
+    },
+    {
+      "path": "third_party/UxPlay/lib/http_request.c",
+      "bytes": 9491,
+      "sha256": "86ae4def3b2a1dc88b246d311e74f42a9a384f30230dc47aa4fe008810a63af7"
+    },
+    {
+      "path": "third_party/UxPlay/lib/http_request.h",
+      "bytes": 1829,
+      "sha256": "0720236eee16581fc381ae57c490f2eb9c5cfd82797895fdbd7d3318f6b611ef"
+    },
+    {
+      "path": "third_party/UxPlay/lib/http_response.c",
+      "bytes": 6041,
+      "sha256": "6159594a4c2d2d5482dfb920a930b09ca60c17850a6f368bd606734689dbcee9"
+    },
+    {
+      "path": "third_party/UxPlay/lib/http_response.h",
+      "bytes": 1592,
+      "sha256": "e9b14b46ebd6fbf8991e731ca77dbcfb87c5af944436958de88ca2b9ba53caf5"
+    },
+    {
+      "path": "third_party/UxPlay/lib/llhttp/api.c",
+      "bytes": 13661,
+      "sha256": "fe2068c02fb964b59ca48e1cb742edb845708c1264a6a058cd25ad0e942ee614"
+    },
+    {
+      "path": "third_party/UxPlay/lib/llhttp/CMakeLists.txt",
+      "bytes": 148,
+      "sha256": "e6b9e4beca9f8d72bfb9b6e225d378103fdcd51c54df744bb00190f91082b8d9"
+    },
+    {
+      "path": "third_party/UxPlay/lib/llhttp/http.c",
+      "bytes": 5379,
+      "sha256": "924ef08d9fbdfa5ae1ede5a2d50dad1365b9b9ff8acdac2d9681b54a34ae98e3"
+    },
+    {
+      "path": "third_party/UxPlay/lib/llhttp/LICENSE-MIT",
+      "bytes": 1127,
+      "sha256": "6ddfa628db76d2d87b8968bafbad60f51c4ec88100dd7bb96f97216d88af0808"
+    },
+    {
+      "path": "third_party/UxPlay/lib/llhttp/llhttp.c",
+      "bytes": 325795,
+      "sha256": "80c55485218ee5e0d83e482e5a404a4a2d46144c771ea2f605d48ef2b9c00fa4"
+    },
+    {
+      "path": "third_party/UxPlay/lib/llhttp/llhttp.h",
+      "bytes": 31557,
+      "sha256": "eb9f66af94a96d9b1795dac37b12212e0d65d1a247004e4deb8b64f45b4c6446"
+    },
+    {
+      "path": "third_party/UxPlay/lib/logger.c",
+      "bytes": 2950,
+      "sha256": "a6e3bebe94adda6459f4f831e7a1a37ed6127d857af26112d1813eb3f37f74d3"
+    },
+    {
+      "path": "third_party/UxPlay/lib/logger.h",
+      "bytes": 1908,
+      "sha256": "11c5c9ab74700917c0612a2eaa4cbdb2d86584db663e01e0ce121d6f1b822c7a"
+    },
+    {
+      "path": "third_party/UxPlay/lib/mirror_buffer.c",
+      "bytes": 4554,
+      "sha256": "25c3d600f2c99dee22c0646521289017466420cd38d380b7e4480fe804d96e4c"
+    },
+    {
+      "path": "third_party/UxPlay/lib/mirror_buffer.h",
+      "bytes": 1234,
+      "sha256": "7793776d1108dc86432f3af8969ad33e79538fc2e3c50f3efe90159efa83c853"
+    },
+    {
+      "path": "third_party/UxPlay/lib/netutils.c",
+      "bytes": 5831,
+      "sha256": "bc30385a7d5992112baceaf57a58b8c31990cc508eac3bc04637ad8718350713"
+    },
+    {
+      "path": "third_party/UxPlay/lib/netutils.h",
+      "bytes": 971,
+      "sha256": "63abfe73f9141b914fa7d945d8f47d3496ba327b30babf531fd0b25a3296b60e"
+    },
+    {
+      "path": "third_party/UxPlay/lib/pairing.c",
+      "bytes": 20351,
+      "sha256": "3845a60da038381f920769c65acd9e4fde59c2bfd3c275a7f616c48436d84d54"
+    },
+    {
+      "path": "third_party/UxPlay/lib/pairing.h",
+      "bytes": 3248,
+      "sha256": "b024c52b63baeaecdbe86aadeb965b62adba1ceef10467770b29d54aee659656"
+    },
+    {
+      "path": "third_party/UxPlay/lib/playfair/CMakeLists.txt",
+      "bytes": 154,
+      "sha256": "27827bef8685d9e7aa39a145e94dad4710589ad431875d831865e2c9c90f9539"
+    },
+    {
+      "path": "third_party/UxPlay/lib/playfair/hand_garble.c",
+      "bytes": 20768,
+      "sha256": "a6e3f762d8e9925323a364b34239432c9e480a6473d067f124a178880ff33d17"
+    },
+    {
+      "path": "third_party/UxPlay/lib/playfair/LICENSE.md",
+      "bytes": 35578,
+      "sha256": "d141f3f6262194909317488d0d79d699fb39b8e907d9f2ea1afc51289d982ac7"
+    },
+    {
+      "path": "third_party/UxPlay/lib/playfair/modified_md5.c",
+      "bytes": 3578,
+      "sha256": "10035fa90f19f5f977afbcf2517ebc4d66e6358ea75986f7271cd93cbde53c1d"
+    },
+    {
+      "path": "third_party/UxPlay/lib/playfair/omg_hax.c",
+      "bytes": 22188,
+      "sha256": "5064be7e2ee1645d16c7d826da9dd7458dec5cd525d42de90573b01cd16ab18f"
+    },
+    {
+      "path": "third_party/UxPlay/lib/playfair/omg_hax.h",
+      "bytes": 483303,
+      "sha256": "9b3f2737decae330d8b1fc1b8f6b83b9c35b3a96de65606a3181f2c69a93ac27"
+    },
+    {
+      "path": "third_party/UxPlay/lib/playfair/playfair.c",
+      "bytes": 1056,
+      "sha256": "f512a3442d24a937060aa303a806e308f1dbad436c212266430885be25fd4374"
+    },
+    {
+      "path": "third_party/UxPlay/lib/playfair/playfair.h",
+      "bytes": 151,
+      "sha256": "fdf9191687a0d13a90635bd689b7c229f612f12c38ad8a1e52d9ce77d4e33736"
+    },
+    {
+      "path": "third_party/UxPlay/lib/playfair/sap_hash.c",
+      "bytes": 3453,
+      "sha256": "b6366cf49dea6cfdaea10806ee4b93e615106a255cdf4ed5532e7f59c0a03def"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop.c",
+      "bytes": 32349,
+      "sha256": "ba08c6310534cda16ae9b53a9d5ac471e9b161726c436902e582888efe26ca9a"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop.h",
+      "bytes": 6360,
+      "sha256": "40d1e23c2f6bd5bf3423af9df211d399a149bb6786fe3140dc763f1b3e53f1c9"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop_buffer.c",
+      "bytes": 9963,
+      "sha256": "bffc34d6f363268bde86934e8d30de9ae3b43f0a0577c941f5e4bf3fee1dc7f1"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop_buffer.h",
+      "bytes": 1782,
+      "sha256": "2f0452fe2754976b6031071f4385c03223c199ba7bec4b611954701be36009e1"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop_handlers.h",
+      "bytes": 62330,
+      "sha256": "1e46ccd068dfee5d18465c7e831682394f9fc31170375137e8b227b78d9c98cf"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop_ntp.c",
+      "bytes": 19744,
+      "sha256": "26a321ab47edcbc7553a7ac09cde77e9c671e7dbd95e43a8dd78a34437ffac34"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop_ntp.h",
+      "bytes": 1846,
+      "sha256": "9900bf15e60c1bab4c8bbc856abd53cd4e1c9d906e86b3084cd1b56021de50ad"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop_rtp.c",
+      "bytes": 31028,
+      "sha256": "2106db13be2f4be42f69c35d9ca2ca4deb92137f9045e7382b5f1049babf195b"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop_rtp.h",
+      "bytes": 2034,
+      "sha256": "9f97c7e3dcc583ec26c8197c2541ff84314bc0302eb1960bdec844ee22edd4a4"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop_rtp_mirror.c",
+      "bytes": 47585,
+      "sha256": "2783c8e50a034bf67b27024167615cebbba939b2c6df87b1f4ec8aeeb5f13797"
+    },
+    {
+      "path": "third_party/UxPlay/lib/raop_rtp_mirror.h",
+      "bytes": 1515,
+      "sha256": "22bee50c5bb409ed8d4bc1028a6cd53dfa9411194f351580ba23ccc0e5483b31"
+    },
+    {
+      "path": "third_party/UxPlay/lib/sockets.h",
+      "bytes": 1507,
+      "sha256": "56a4e8deb74c43c52c781ecd22c87e685f660facc6bb33ac087916079f5f078c"
+    },
+    {
+      "path": "third_party/UxPlay/lib/srp.c",
+      "bytes": 37891,
+      "sha256": "3ec7b0cb04045591b39acab5bad91e70865c8fa0bc8cf1555ec44cb10e67ebd8"
+    },
+    {
+      "path": "third_party/UxPlay/lib/srp.h",
+      "bytes": 10407,
+      "sha256": "559b6040f8f1e10ec52f796b8f1aa227f48d4ca9c1a0308cd6a64ac3b56e2974"
+    },
+    {
+      "path": "third_party/UxPlay/lib/stream.h",
+      "bytes": 1282,
+      "sha256": "9e30835d14f15f72932d9a8fa99c07e5a89b58af0c4a20ba0ac10483c62305a0"
+    },
+    {
+      "path": "third_party/UxPlay/lib/threads.h",
+      "bytes": 1642,
+      "sha256": "93adc43e5a453ef280f731e11a0350593b533edf7a78825a5cfe848d60f80ca7"
+    },
+    {
+      "path": "third_party/UxPlay/lib/utils.c",
+      "bytes": 11199,
+      "sha256": "e9c626daebf40ffa3c94031ac521e29b32616d7104fb155e8fa9b89f5ebd16a7"
+    },
+    {
+      "path": "third_party/UxPlay/lib/utils.h",
+      "bytes": 1790,
+      "sha256": "31eacf89f3103061824db0bd8064c7c5457bbbfd2baf8cade1021b4aca58ab36"
+    },
+    {
+      "path": "third_party/UxPlay/LICENSE",
+      "bytes": 35823,
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+    },
+    {
+      "path": "third_party/UxPlay/README.html",
+      "bytes": 147085,
+      "sha256": "a86417a22fde6eb24a5a6173326f6097e5104f27cf7c0175c2ae0411c351e802"
+    },
+    {
+      "path": "third_party/UxPlay/README.md",
+      "bytes": 133072,
+      "sha256": "eead4f6f72bf01d55cfb7db9cf957a9ef0f495bdb9ac16ac3f49ac3e54755fd7"
+    },
+    {
+      "path": "third_party/UxPlay/README.txt",
+      "bytes": 133391,
+      "sha256": "3bb5c65ef6779116a98430131948bf58f7dab205b36fbfc602ca3ccd67304cd3"
+    },
+    {
+      "path": "third_party/UxPlay/renderers/audio_renderer.c",
+      "bytes": 17368,
+      "sha256": "afc6d28d41f044769ef56f9bacf3cc0619a71bb0385578a6bfa4e42a5f8d1ee7"
+    },
+    {
+      "path": "third_party/UxPlay/renderers/audio_renderer.h",
+      "bytes": 1761,
+      "sha256": "dfc8644dacd63b2cee5654b110aa11c4b78b0280801260a88147bfa055698001"
+    },
+    {
+      "path": "third_party/UxPlay/renderers/CMakeLists.txt",
+      "bytes": 3766,
+      "sha256": "31d40b9dfcfe2b73ca81652680e0c0685f75e35b91e5436ab10e1dce3cfe006b"
+    },
+    {
+      "path": "third_party/UxPlay/renderers/mux_renderer.c",
+      "bytes": 12134,
+      "sha256": "429ab261a22aeda6412724ddb50659c6142c34f5b3ec19c991b08c02e08b7b0b"
+    },
+    {
+      "path": "third_party/UxPlay/renderers/mux_renderer.h",
+      "bytes": 1532,
+      "sha256": "b0ec2ac83fbcc1b08c53aa4dbe5991866d3b68fa51e7287fa23cdd59a05d5ed2"
+    },
+    {
+      "path": "third_party/UxPlay/renderers/video_renderer.c",
+      "bytes": 49781,
+      "sha256": "3c80f832434465f67a2c0de41f09195af9fe2b716495c811b477524e6b6be461"
+    },
+    {
+      "path": "third_party/UxPlay/renderers/video_renderer.h",
+      "bytes": 3170,
+      "sha256": "dfaba3d50eaea6fdbafb922b3f7e15c07b3bcdf93524444b4271dc08ac8dcf72"
+    },
+    {
+      "path": "third_party/UxPlay/renderers/x_display_fix.h",
+      "bytes": 4148,
+      "sha256": "bf2e89027f41d6750e360b88d0b59ca3e8a87391bbf68d2895c68c3ecdd89520"
+    },
+    {
+      "path": "third_party/UxPlay/uxplay.1",
+      "bytes": 8264,
+      "sha256": "3a86b2d5889d1bd83b55ecf88d6f26f1edc88e68a7d0c753e8c27de414b823c5"
+    },
+    {
+      "path": "third_party/UxPlay/uxplay.cpp",
+      "bytes": 131813,
+      "sha256": "85fd59422f07b6e0954b9c8fccb6095e657def999a68ca219ed895cdcfde7901"
+    },
+    {
+      "path": "third_party/UxPlay/uxplay.service",
+      "bytes": 232,
+      "sha256": "054a2c1bc1b9c7c0ce1cd502dae3aa24f26855c296abae29f6e6c47b02f3ac27"
+    },
+    {
+      "path": "third_party/UxPlay/uxplay.spec",
+      "bytes": 4719,
+      "sha256": "993970feee65353004c390c64775d781353c3ba831a3332418d820e7035b7eb4"
+    },
+    {
+      "path": "third_party/bonjour/Include/dns_sd.h",
+      "bytes": 168918,
+      "sha256": "5d0ca50f207f6eb02e09d743f9b65d2ade65e8f81862dcd3703845b4fe87a9c1"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "bytes": 1671,
+      "sha256": "acf4b531b577232eaf7c8e064e2172430dd22ea01326d7e87801c2998a16aa8c"
+    },
+    {
+      "path": "android/app/src/main/assets/licenses/Apache-2.0.txt",
+      "bytes": 10280,
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    {
+      "path": "android/app/src/main/assets/licenses/MeshAudio-GPL-3.0.txt",
+      "bytes": 35823,
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+    },
+    {
+      "path": "android/app/src/main/assets/licenses/NOTICE.txt",
+      "bytes": 639,
+      "sha256": "3fa91bdea41d4c8d87d0a8b9325d784865669e38e350acec9e987462cfd3b855"
+    },
+    {
+      "path": "android/app/src/main/java/com/meshaudio/node/AudioTransport.java",
+      "bytes": 5351,
+      "sha256": "5489b0a6529b64c9fb2b3b1a4fae8d5a1224fbfff055b6e10daa15a03b48dc21"
+    },
+    {
+      "path": "android/app/src/main/java/com/meshaudio/node/CaptureWorker.java",
+      "bytes": 8830,
+      "sha256": "414f87bc7a8d29479411027cd9188cb79623d530346021500068e23373a84d77"
+    },
+    {
+      "path": "android/app/src/main/java/com/meshaudio/node/ControlMonitor.java",
+      "bytes": 2030,
+      "sha256": "a703fe04e386f51e766891ecd39af6aee4e607d708bf0cd3101370308302ded1"
+    },
+    {
+      "path": "android/app/src/main/java/com/meshaudio/node/Discovery.java",
+      "bytes": 4377,
+      "sha256": "5347579d0c74013359ff5ce4dc27be6edff50fbcdd1e487b21a1ea34f597dadb"
+    },
+    {
+      "path": "android/app/src/main/java/com/meshaudio/node/MainActivity.java",
+      "bytes": 17106,
+      "sha256": "6d1a25da23f28a7449aa3a7e9ea3b2778d291abc1fa74007aa75b54a2951a80d"
+    },
+    {
+      "path": "android/app/src/main/java/com/meshaudio/node/NodeSettings.java",
+      "bytes": 2329,
+      "sha256": "369249dd46bfbcf0d346556fdce020fb0d0593b0d1e25c4fd2e8c51217719fbc"
+    },
+    {
+      "path": "android/app/src/main/java/com/meshaudio/node/Protocol.java",
+      "bytes": 1378,
+      "sha256": "4e06e38517fbd83181682942cdb4dfc7232cea12f329ad5495a62ea18458d35a"
+    },
+    {
+      "path": "android/app/src/main/java/com/meshaudio/node/RelayService.java",
+      "bytes": 9074,
+      "sha256": "bd2812ec66728a49ab22b29a3857e2a65bea1c56768a749b4bd9b9ee12606226"
+    },
+    {
+      "path": "android/app/src/main/res/drawable/ic_audio.xml",
+      "bytes": 322,
+      "sha256": "050ca8c053c9cf8712966a23246bc0456596eb16d65184d6df6adbce3dbb2b2d"
+    },
+    {
+      "path": "android/app/src/main/res/values/ids.xml",
+      "bytes": 461,
+      "sha256": "b8399a770fb6f9b4ec28ee931396ccf09d4a83f3f66a5d4cb3c70c6bcbc7de34"
+    },
+    {
+      "path": "android/app/src/main/res/values/styles.xml",
+      "bytes": 574,
+      "sha256": "6134be69feec3e7e180602f1311d6468f470b04398334e176d1ca77108b2766f"
+    },
+    {
+      "path": "android/app/src/test/java/com/meshaudio/node/ProtocolTest.java",
+      "bytes": 2005,
+      "sha256": "5665573e1ebe838a7ac2dc6647c71e408ca28f44ff6fce54c657cdcfe62e11c9"
+    },
+    {
+      "path": "android/test-player/src/main/AndroidManifest.xml",
+      "bytes": 538,
+      "sha256": "afcaad4adac623e5fd65c597496a30cb83c578bd94ba3e6b4f2fb947e7c38307"
+    },
+    {
+      "path": "android/test-player/src/main/java/com/meshaudio/testplayer/MainActivity.java",
+      "bytes": 2323,
+      "sha256": "201ff8990d3ec96004a5932124c7fcbe15bafac390c3dfdfcfe284a15d602bbe"
+    },
+    {
+      "path": "android/device-driver/src/main/AndroidManifest.xml",
+      "bytes": 287,
+      "sha256": "9958aa25eefbcb36462ac39347cecc3989cb301c047bdeed932b294aab1ccb74"
+    },
+    {
+      "path": "android/device-driver/src/main/java/com/meshaudio/node/DeviceDriver.java",
+      "bytes": 2231,
+      "sha256": "384b3fd66251ab0a5b48121d839e142faf06b6ce737353bf65f5f750b6ac369c"
+    },
+    {
+      "path": "android/gradle/verification-metadata.xml",
+      "bytes": 105088,
+      "sha256": "7b1dd706c9305f431160f39129d532924c3db511a1a475b992b1c07f28ba97a5"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 43583,
+      "sha256": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046"
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 340,
+      "sha256": "09debb2fbd9878414d0632cc40a7e285966bfd0625c0d430bfa11e3cab173335"
+    },
+    {
+      "path": "android/README.md",
+      "bytes": 6384,
+      "sha256": "4972a9055f4dab4464a19f4e6a05ac86a660b5aa06f31db217fbe87c8aadb813"
+    },
+    {
+      "path": "android/settings.gradle",
+      "bytes": 581,
+      "sha256": "6b4cd31eee748645155cc65b25759dcc9774608bc10348428681dda5a6b2b993"
+    },
+    {
+      "path": "android/build.gradle",
+      "bytes": 73,
+      "sha256": "c3c0cf04da0fc239f391c774554d97d890018ab6e37e87cc62f6070d0c8c9909"
+    },
+    {
+      "path": "android/gradle.properties",
+      "bytes": 135,
+      "sha256": "4416d01ea334fcdc76a33dd8ad2523d733b9bc18cce7b1091afd9a8cc0959a7f"
+    },
+    {
+      "path": "android/gradlew",
+      "bytes": 8762,
+      "sha256": "a3648413b47ef77af21d5ebc36c687c7d103aaef3e17f33de7d4f080a6f300a3"
+    },
+    {
+      "path": "android/gradlew.bat",
+      "bytes": 2966,
+      "sha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "bytes": 634,
+      "sha256": "d5e9b66fda5715196541f486baddf87fe1863c29bdb8b3f8252916934b8e9de9"
+    },
+    {
+      "path": "android/test-player/build.gradle",
+      "bytes": 344,
+      "sha256": "263c028d0ab3617ecf389ca17b062e22ed07581d54ca64dc720f90025f619171"
+    },
+    {
+      "path": "android/device-driver/build.gradle",
+      "bytes": 336,
+      "sha256": "786a8a4b31ab68d0f8cb1c5bed503a6b2b642971571e1135c6bc9daba906d3a3"
+    },
+    {
+      "path": "desktop/airplay-bridge.js",
+      "bytes": 14457,
+      "sha256": "7c73a14051a5cf6e7c0d8b5a859dfc6790c48e4cfd242be1ffbed5cbb8d43bf0"
+    },
+    {
+      "path": "desktop/airplay-manager.js",
+      "bytes": 11969,
+      "sha256": "c155a32e7ae18fd9066123b39d11d6993e7a9d56a821428b5c3f1bb9d33c4325"
+    },
+    {
+      "path": "desktop/audio-engine.js",
+      "bytes": 18052,
+      "sha256": "82d91240fd00c4a2401140af1d33a9017523b096d40fb10d827ae7f4795da05e"
+    },
+    {
+      "path": "desktop/audio-engine.test.js",
+      "bytes": 9101,
+      "sha256": "39936f929517713c84056841059903248edda1dd3fb5f79a3e4780235647dcdc"
+    },
+    {
+      "path": "desktop/component-manager.js",
+      "bytes": 29016,
+      "sha256": "7fd6e87c8e1b68b5874df37fd8b076ecdbfb1e4f2b919e56a408f615902a97ec"
+    },
+    {
+      "path": "desktop/components.manifest.json",
+      "bytes": 3327,
+      "sha256": "ff745cc51b024c34c6157e48e0ca475dd8e8c6fc8dfbc310c699099c64575ce9"
+    },
+    {
+      "path": "desktop/engine-output.js",
+      "bytes": 12638,
+      "sha256": "b70d71050c2a922b7782288bce3c7ad716cc0fd59cdb13f07a1a4c795293d3af"
+    },
+    {
+      "path": "desktop/engine-output.test.js",
+      "bytes": 2835,
+      "sha256": "a26f5189a49e9c046a7f3165c98a30a2abb9fa4788382ac5b927dc8ce092dab8"
+    },
+    {
+      "path": "desktop/native-bridge.js",
+      "bytes": 9965,
+      "sha256": "490bcaa6cc8b8bd461965039c5c88416ec5b52606350b84fa82f2a2e3f658818"
+    },
+    {
+      "path": "desktop/native-bridge.test.js",
+      "bytes": 1703,
+      "sha256": "4fb5227f596f1527acd9d51615f2134fe73b6e5c8da58f87d6df843ed0b38aa7"
+    },
+    {
+      "path": "desktop/network-addresses.js",
+      "bytes": 1159,
+      "sha256": "43cffa4dac3c8300c730818067bb5c50fd4e3d73197a89b3f7793ab4301b3313"
+    },
+    {
+      "path": "desktop/web-microphone-gateway.js",
+      "bytes": 5686,
+      "sha256": "7f0c91600f9afd5290e249b36128f847b51858f37898a197d8c40a0d6757f673"
+    },
+    {
+      "path": "desktop/native/audio_sink.h",
+      "bytes": 389,
+      "sha256": "4fb086c2d0f87a53fea05b0b49cc5580c86f2868fed3120b475db886438836da"
+    },
+    {
+      "path": "desktop/native/CMakeLists.txt",
+      "bytes": 1585,
+      "sha256": "f02e440671ca4f47655e88aa9e892721b4d4276794ad73bd95cf728926d2ed0f"
+    },
+    {
+      "path": "desktop/native/device_enumerator.cpp",
+      "bytes": 3784,
+      "sha256": "043c9b529a9513dc09cf9c782d68d8c3baab79fbbb69d7f8aa6856d8b85791a8"
+    },
+    {
+      "path": "desktop/native/device_enumerator.h",
+      "bytes": 468,
+      "sha256": "92780e0cd08402979865ef049cff92503d8a09187b2552938e85f5630250c63b"
+    },
+    {
+      "path": "desktop/native/main.cpp",
+      "bytes": 31261,
+      "sha256": "529dcfa9cc9f0ac957fcc0560a6fcb3c3a8d7ddea343d4798061513782d323be"
+    },
+    {
+      "path": "desktop/native/mix_engine.cpp",
+      "bytes": 27984,
+      "sha256": "6a907983dd74d36bb26a8bb6d476c46d73e477ac15ba89297cde41f205274e25"
+    },
+    {
+      "path": "desktop/native/mix_engine.h",
+      "bytes": 7009,
+      "sha256": "44c1624192917bd590a4de54d53b75f78b22c335b253c6893bcda761f8308fe9"
+    },
+    {
+      "path": "desktop/native/mix_engine_test.cpp",
+      "bytes": 4056,
+      "sha256": "eecfe51984932c06e9a98962016b20e95634991db44677fa9ab2ed7de9656cb8"
+    },
+    {
+      "path": "desktop/native/README.md",
+      "bytes": 6674,
+      "sha256": "2ee8c1709b7a2f6779f92b76c659b46cf10f8bce4f432380b514b2808669e12a"
+    },
+    {
+      "path": "desktop/native/wasapi_capture_source.cpp",
+      "bytes": 12763,
+      "sha256": "00fbb72469f852d5f6d40794061123e59ceed51f9a6f82a56d3866608121fc68"
+    },
+    {
+      "path": "desktop/native/wasapi_capture_source.h",
+      "bytes": 1180,
+      "sha256": "5575c11149ac1b8d1fe8ef3595da9de86fc7955fbf2c7eb2e4ac8453b87d6a57"
+    },
+    {
+      "path": "desktop/native/wasapi_render_sink.cpp",
+      "bytes": 16976,
+      "sha256": "dcdb189fe30b07ab14f59ac4b40098485b83c60fbc51c6371914b55fbe8d6e44"
+    },
+    {
+      "path": "desktop/native/wasapi_render_sink.h",
+      "bytes": 980,
+      "sha256": "d2f6b8e25f4dd59689bd895312a142fc7d5c9f087b1eba8c2987ac0789168d6a"
+    },
+    {
+      "path": "desktop/native/windows_support.h",
+      "bytes": 2080,
+      "sha256": "4d67d6d49d8c4676d70b7d1286324c92ae3836f43b1659b50f431420bf7ef3ac"
+    },
+    {
+      "path": "desktop-app/package.json",
+      "bytes": 809,
+      "sha256": "9016ec89f7a12027e081c402e7cef9c0b99400887ffa4b2099f626e61c154da8"
+    },
+    {
+      "path": "desktop-app/package-lock.json",
+      "bytes": 75521,
+      "sha256": "34d99f82ace373f9851cb80f8b1fd1949e9e3f4af919e14de74be66d341116ba"
+    },
+    {
+      "path": "desktop-app/vite.config.ts",
+      "bytes": 1164,
+      "sha256": "b6f49285152f435522094da4e365494bac5c9f5be945977839a01e43f8ae12d4"
+    },
+    {
+      "path": "desktop-app/tsconfig.json",
+      "bytes": 430,
+      "sha256": "e4fb7d29b381f8a1fb06a4ac377a5d2a58c4ba9611a932acc9c5fd819423e6b0"
+    },
+    {
+      "path": "desktop-app/index.html",
+      "bytes": 420,
+      "sha256": "9b6d7201f3a4abc4710ba758b8a7cad50f592b037da36fd167db44f9a23f56ad"
+    },
+    {
+      "path": "desktop-app/src-tauri/Cargo.toml",
+      "bytes": 598,
+      "sha256": "7c28876b928daeb0e7e8a98e509e331647c5281c2b9d763aabd0cc4083174a39"
+    },
+    {
+      "path": "desktop-app/src-tauri/Cargo.lock",
+      "bytes": 114759,
+      "sha256": "b6a8a99f44bb83c66cd7b5bc828afd41ae29b8ae1a2994c92410d647385c1156"
+    },
+    {
+      "path": "desktop-app/src-tauri/build.rs",
+      "bytes": 39,
+      "sha256": "487059eaf8a947b80f20a9aacac038a5047b2ad69d2401b827376c67d6fe847f"
+    },
+    {
+      "path": "desktop-app/src-tauri/tauri.conf.json",
+      "bytes": 4335,
+      "sha256": "876d50877d13a4e83204d1c95b84d9599b238314f539af05b36051e5f374e9af"
+    },
+    {
+      "path": "third_party/uxplay.lock.json",
+      "bytes": 190,
+      "sha256": "4cb74b3f4ede65fd6edcc99da961c0eac5f98dfc83b2289073ca9ca84de18eac"
+    },
+    {
+      "path": "third_party/uxplay-meshaudio.patch",
+      "bytes": 3516,
+      "sha256": "412d9dd1bdd4f49e3bdb09e938cfeaf96f674ebbbcf428f3d32a27b4f1bbb020"
+    },
+    {
+      "path": "third_party/airplay-dependencies.lock.json",
+      "bytes": 12532,
+      "sha256": "de2f6172cbba177140c6df94bf8aa22b8c1722dfc956748d32d97b18ac5776f2"
+    },
+    {
+      "path": "tools/analyze-wav.js",
+      "bytes": 3507,
+      "sha256": "8b8dbf42dbe29051bcba99b7a0eb7c5eee781a1805cc154fed585536e0cf868c"
+    },
+    {
+      "path": "tools/build-android.ps1",
+      "bytes": 2589,
+      "sha256": "4d79c695d7e762002faab9e5674ab555b56590950350b46c30545a5bfde281dc"
+    },
+    {
+      "path": "tools/build-minimal-codecs.js",
+      "bytes": 2554,
+      "sha256": "ed4787607300dad3ffcf466ae25af37465e2ed2e2cc7ebe839f0526b9f352a3a"
+    },
+    {
+      "path": "tools/build-minimal-codecs.sh",
+      "bytes": 1330,
+      "sha256": "8ec61dd65fcb610886ba58b03831cca20710d79054316d3339abe76749603a2a"
+    },
+    {
+      "path": "tools/build-native.ps1",
+      "bytes": 3427,
+      "sha256": "44c23f4f1c173bff70b2d128b983f1db9bd69ac5bca1d8ccfbc5aa3417387c12"
+    },
+    {
+      "path": "tools/build-uxplay.ps1",
+      "bytes": 2135,
+      "sha256": "445449250e7d253882d436a3c28eea1cf24f8de5bdc931c9639df87377a81157"
+    },
+    {
+      "path": "tools/configure-airplay-firewall.ps1",
+      "bytes": 2207,
+      "sha256": "4439ae6e83de089c50fbcba3cdd0e1bcff41ce5318b91faddf2d05264b0fc00c"
+    },
+    {
+      "path": "tools/configure-web-microphone.ps1",
+      "bytes": 3331,
+      "sha256": "c74a2d580485e000bea57e32bcf8c84fb75befb2184c3e32a0a58f32613fdf3f"
+    },
+    {
+      "path": "tools/engine-smoke.js",
+      "bytes": 4901,
+      "sha256": "e4a54c64e5549b07b4d35f796669cd9cb98eb7e63b157b23b80cb589c4de9baa"
+    },
+    {
+      "path": "tools/export-public-source.js",
+      "bytes": 8139,
+      "sha256": "fc5e76093562c459a8789cee622fd5bb288c59fe1ee647f5e3c37a899e649048"
+    },
+    {
+      "path": "tools/list-audio-devices.ps1",
+      "bytes": 338,
+      "sha256": "9e975639ba41b4bd6761f3fc95fead25b7c72df2665666d18a26d0a968306490"
+    },
+    {
+      "path": "tools/package-uxplay.js",
+      "bytes": 5597,
+      "sha256": "465887a04298d9f9c86e38a153b9909a193ec16fd7d5792f6cf38eec1a5d9680"
+    },
+    {
+      "path": "tools/prepare-airplay-sources.js",
+      "bytes": 7094,
+      "sha256": "ce1e7c56d2dcab602cae185d46ad4442b301e86c96558f940beae3af4817ea07"
+    },
+    {
+      "path": "tools/prepare-license-notices.js",
+      "bytes": 5203,
+      "sha256": "53a3954869225bd07e43180bb21a2c51408da032b310fb651edfc5adb1df2df9"
+    },
+    {
+      "path": "tools/send-soak-audio.js",
+      "bytes": 2312,
+      "sha256": "ad6bd967609b0886b9dea8b4a89f8e3e176cd1f394fd75faf38ba7d57e2b56e2"
+    },
+    {
+      "path": "tools/send-test-audio.js",
+      "bytes": 800,
+      "sha256": "00fd7fdeddc2c1cb1e2ca4a3ff228b8d8297e3701ecf09fcfcc105e4760fd518"
+    },
+    {
+      "path": "tools/setup-android.ps1",
+      "bytes": 2533,
+      "sha256": "75f6f625e5d86df84137acab959192aeb31c353ef1d37f2ec48ce52c35ff5a87"
+    },
+    {
+      "path": "tools/test-airplay-bridge.js",
+      "bytes": 4673,
+      "sha256": "141e03ac5f25bfc1d990a01a526c920e1faf33c66a095013ef66ac4f689bfe44"
+    },
+    {
+      "path": "tools/test-airplay-lines.js",
+      "bytes": 10411,
+      "sha256": "308267610e41a1065bae395378636f8ff39f705bea61fc4781d533c700a4d854"
+    },
+    {
+      "path": "tools/test-airplay-presence.js",
+      "bytes": 2637,
+      "sha256": "878ad4a61cf748a7df0800541eeb2f25461a6c5f1421105314639bf2f9fd5ddc"
+    },
+    {
+      "path": "tools/test-airplay-ui.js",
+      "bytes": 15835,
+      "sha256": "890a1295fd51a991f27ce3f4ffab3600581d6214ac8e8dcdec6d8f187a7c364f"
+    },
+    {
+      "path": "tools/test-android-device.js",
+      "bytes": 22068,
+      "sha256": "5c1be730f55c8dd84a678ba3003f02882b9cf553e6222f8c4a592d535d322a10"
+    },
+    {
+      "path": "tools/test-audio-telemetry.js",
+      "bytes": 10090,
+      "sha256": "59fc8b62f948b6d2dc154d7898a96b2275b4cfa14a49a0f402d5eeb49c1225ab"
+    },
+    {
+      "path": "tools/test-audio-websocket.js",
+      "bytes": 2028,
+      "sha256": "e9f1a2c7f6a4a75d3feab8f7a57d4cd8c5feaf89ce55785a111ecb32fe47d76f"
+    },
+    {
+      "path": "tools/test-browser-audio-ws.js",
+      "bytes": 5577,
+      "sha256": "e4fce62562b9280ae805dddcee0972dd6f96acd76319797823699b3f6eaaa743"
+    },
+    {
+      "path": "tools/test-bundled-airplay-setup.js",
+      "bytes": 5378,
+      "sha256": "4f1bf04a158afe1a0290fcaf2d2ba684964ccb3c4218c6fc8419bcda5da61f25"
+    },
+    {
+      "path": "tools/test-capture-comparison.js",
+      "bytes": 3417,
+      "sha256": "26cb0063318a0d300f5affad7bbd02741db65a1e12c29e781f40c9c6db84db6f"
+    },
+    {
+      "path": "tools/test-component-setup.js",
+      "bytes": 5229,
+      "sha256": "bac3af4ddacf99005f1d766e4a0f6369be476ca1a86deefa708ca51b22c648b0"
+    },
+    {
+      "path": "tools/test-components.js",
+      "bytes": 5087,
+      "sha256": "6863b5cecec54792ad23dd979038f5a6a9ae8e99445772fbbb4a371b1253be5b"
+    },
+    {
+      "path": "tools/test-control-protocol.js",
+      "bytes": 10927,
+      "sha256": "c2b079c695340e615acf426b1baa952a8e2eea11b551ffc353eea467e14832c4"
+    },
+    {
+      "path": "tools/test-control-validation.js",
+      "bytes": 3526,
+      "sha256": "f1a67dbf8d8f8c00a99457fabafc384b00e0ab2a38e8d0d0af58a2e6b95c9951"
+    },
+    {
+      "path": "tools/test-control-websocket.js",
+      "bytes": 1607,
+      "sha256": "22c50b1bff454d9f016ecc70aa52856be349bdea66636448d212f417126c7a44"
+    },
+    {
+      "path": "tools/test-minimal-codecs.js",
+      "bytes": 3908,
+      "sha256": "95240f0deee32f2b51b728e1e5a8f6a1a704db9c59b17daa5c419458f45d8c4f"
+    },
+    {
+      "path": "tools/test-packaged-airplay.js",
+      "bytes": 6802,
+      "sha256": "9ec5e513723b336cbe42aa5c1b01d22b63116fef77d4253659aa3b1b643ed03b"
+    },
+    {
+      "path": "tools/test-routing-setup-ui.js",
+      "bytes": 17123,
+      "sha256": "478d242b4a6fa770ef0b69b7f11fc0dfdd069f50e7f8e70e2a7fd9d5735efc1c"
+    },
+    {
+      "path": "tools/test-source-lifecycle.js",
+      "bytes": 13173,
+      "sha256": "6d59295a2a6ab52b867b04db83567be1d537bbedc10d0022269e7c6d20b67fe1"
+    },
+    {
+      "path": "tools/test-virtual-endpoint-continuity.js",
+      "bytes": 4951,
+      "sha256": "9268f257c0a4a929e6ca0b7a093c770ca60fb540257b3477e28d4efd45acc5da"
+    },
+    {
+      "path": "tools/test-ws-suite.js",
+      "bytes": 2590,
+      "sha256": "2cfd211db960bda90203f9eee2893141a006e1f1d434a0fbb05c4d16dce7028d"
+    },
+    {
+      "path": "tools/verify-package-resources.js",
+      "bytes": 6538,
+      "sha256": "a9998f29fd3209b56fee6f906cd392b4c8917edd83d14784ce9412780293a4c3"
+    },
+    {
+      "path": "docs/PROJECT-OVERVIEW.md",
+      "bytes": 14841,
+      "sha256": "283937ae0d0046a159b47bbfa373d9ee267d24454e464069f4793b2be5d76638"
+    },
+    {
+      "path": "docs/LICENSING.md",
+      "bytes": 8113,
+      "sha256": "401b9ae2de04213632f1724e1abda4e9407c6cf8d5a20b18d151dca06d962651"
+    },
+    {
+      "path": "docs/PUBLIC-BUILD.md",
+      "bytes": 3023,
+      "sha256": "b939cd516ec8938b2e78eae9a6657428819bbbd99b8e06eb60648afa7e2d8be5"
+    },
+    {
+      "path": "docs/WINDOWS-INSTALLATION.md",
+      "bytes": 3645,
+      "sha256": "9eba43bc65aaf76eb981edc630902f64280ca4bd4b4e822af43be9cd9ee4505e"
+    },
+    {
+      "path": "docs/KNOWN-LIMITATIONS.md",
+      "bytes": 2267,
+      "sha256": "39f08501eaee8a136fb8b3535ab18747e49b5f67c251272d870b54249fa33667"
+    },
+    {
+      "path": "docs/THIRD-PARTY-SOURCES.md",
+      "bytes": 2422,
+      "sha256": "fa520c8d3255c69d5ffddcb6e4942766400403ad8040f6759b8cdcaacf69f06c"
+    },
+    {
+      "path": "docs/RELEASE.md",
+      "bytes": 4377,
+      "sha256": "ad20cb0cd451f8bea97b79d40b3683b83a1233f83ad89c7b3685a8e0b30b7e41"
+    },
+    {
+      "path": "docs/ACCEPTANCE-0.3.0.md",
+      "bytes": 3783,
+      "sha256": "ceb7e5e83c17ee5cf9913fac293d1021750f45923156bea3fa55460730e25cb5"
+    },
+    {
+      "path": "docs/ACCEPTANCE-0.3.1.md",
+      "bytes": 2591,
+      "sha256": "af8046cf20f27ab07280ce2e9027c2ead3031ad6f51d2aa39550116626097efa"
+    },
+    {
+      "path": "docs/ACCEPTANCE-ANDROID-0.3.1.md",
+      "bytes": 4119,
+      "sha256": "252ea2b69d03640e2ed42663e21615bd9b0993ddaac79e9802f2c2f06c48690b"
+    },
+    {
+      "path": "docs/ADR-007-native-airplay-lines.md",
+      "bytes": 1404,
+      "sha256": "11e0e58a9d9305cd30d370593012934649f662c8c46ae58ecc48bbb469ac90ad"
+    },
+    {
+      "path": "docs/ADR-008-web-microphone-and-presence.md",
+      "bytes": 2038,
+      "sha256": "3e2383486f0f716967f2b919917b9513810e39cc2d26eab8f170588d027661e7"
+    },
+    {
+      "path": "docs/ADR-009-observability-and-audio-isolation.md",
+      "bytes": 2620,
+      "sha256": "a8cead571463f21c1933fad38121514ea62982f5ef9f35a413fb808fe3f41af7"
+    },
+    {
+      "path": "docs/ADR-010-interaction-installation-license.md",
+      "bytes": 2467,
+      "sha256": "9759a61b22e680ccc0f4eeb999846d959cf49e5ba60415f3343a4e67c3e29f95"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 2733,
+      "sha256": "a2a666ace01f5eea20ade61d8ddaadaf31e54f45e037b2355725e940c44c16f0"
+    },
+    {
+      "path": "docs/AIRPLAY-NATIVE.md",
+      "bytes": 4199,
+      "sha256": "9d9b57d3340a94fc958b3477e1fa9bbfff59958916b131ff01caa3a681fc7260"
+    },
+    {
+      "path": "docs/WEB-MICROPHONE.md",
+      "bytes": 5537,
+      "sha256": "2c934a01d768005eba6ccb40cdc79a3c329eb617968a4b71ba09807e8da26598"
+    }
+  ]
+}

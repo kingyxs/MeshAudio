@@ -1,0 +1,95 @@
+diff --git a/lib/raop.c b/lib/raop.c
+index 7098fae..9d6de53 100644
+--- a/lib/raop.c
++++ b/lib/raop.c
+@@ -31,6 +31,7 @@
+ #include "compat.h"
+ #include "raop_rtp_mirror.h"
+ #include "raop_ntp.h"
++#include "utils.h"
+ 
+ 
+ /* libplist-2.3.0  API change */
+@@ -119,9 +120,21 @@ struct raop_conn_s {
+     char *client_session_id;
+     bool authenticated;
+     bool have_active_remote;
++    bool meshaudio_session_active;
+ };
+ typedef struct raop_conn_s raop_conn_t;
+ 
++/* Report negotiated sessions, not transient RTSP probes or PCM activity. */
++static void
++meshaudio_session(raop_conn_t *conn, bool active) {
++    if (conn->meshaudio_session_active == active) return;
++    conn->meshaudio_session_active = active;
++    char ip[64] = {0};
++    utils_ipaddress_to_string(conn->remotelen, conn->remote, conn->zone_id, ip, (int) sizeof(ip));
++    logger_log(conn->raop->logger, LOGGER_INFO,
++               "MESHAUDIO_SESSION %s id=%p ip=%s", active ? "connected" : "disconnected", (void *) conn, ip);
++}
++
+ #include "raop_handlers.h"
+ #include "http_handlers.h"
+ 
+@@ -548,6 +561,7 @@ conn_destroy(void *ptr) {
+     raop_conn_t *conn = ptr;
+     raop_t *raop = conn->raop;
+     logger_log(raop->logger, LOGGER_DEBUG, "Destroying connection");
++    meshaudio_session(conn, false);
+ 
+     if (raop->callbacks.conn_destroy) {
+         raop->callbacks.conn_destroy(raop->callbacks.cls);
+diff --git a/lib/raop_handlers.h b/lib/raop_handlers.h
+index 1aeba28..d98d238 100644
+--- a/lib/raop_handlers.h
++++ b/lib/raop_handlers.h
+@@ -1052,6 +1052,8 @@ raop_handler_setup(raop_conn_t *conn,
+         plist_dict_set_item(res_root_node, "streams", res_streams_node);
+     }
+ 
++    if (conn->raop_ntp || conn->raop_rtp || conn->raop_rtp_mirror) meshaudio_session(conn, true);
++
+     plist_to_bin(res_root_node, response_data, (uint32_t*) response_datalen);
+     plist_free(res_root_node);
+     plist_free(req_root_node);
+diff --git a/uxplay.cpp b/uxplay.cpp
+index b64ff05..1858b37 100644
+--- a/uxplay.cpp
++++ b/uxplay.cpp
+@@ -2889,6 +2889,23 @@ int main (int argc, char *argv[]) {
+ void real_main (int argc, char *argv[]) {
+ #else
+ int main (int argc, char *argv[]) {
++#endif
++#ifdef _WIN32
++    // MeshAudio integration, 2026-11-13: never outlive the owning sidecar.
++    // Uses documented Win32 process handles, without a tray or video window.
++    const char *owner_env = getenv("MESHAUDIO_UXPLAY_PARENT");
++    if (owner_env && *owner_env) {
++        DWORD owner_pid = (DWORD) strtoul(owner_env, NULL, 10);
++        HANDLE owner = OpenProcess(SYNCHRONIZE, FALSE, owner_pid);
++        if (!owner) return 1;
++        GThread *watcher = g_thread_new("meshaudio-owner", [](gpointer process) -> gpointer {
++            WaitForSingleObject((HANDLE) process, INFINITE);
++            CloseHandle((HANDLE) process);
++            ExitProcess(0);
++            return NULL;
++        }, owner);
++        g_thread_unref(watcher);
++    }
+ #endif
+     std::vector<char> server_hw_addr;
+     std::string config_file = "";
+@@ -3045,7 +3062,10 @@ int main (int argc, char *argv[]) {
+         videosink.append("fakesink");
+ 	videosink_options.erase();
+ 	LOGI("video_disabled");
+-        display[3] = 1; /* set fps to 1 frame per sec when no video will be shown */
++        // Keep the sender's normal display cadence even when the video sink is
++        // disabled. Advertising 1 FPS makes iOS mirror animation visibly
++        // stutter before the audio-only session has settled.
++        display[3] = 0;
+     }
+ 
+     if (fullscreen && use_video) {

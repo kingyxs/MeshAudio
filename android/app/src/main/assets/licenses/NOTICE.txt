@@ -1,0 +1,11 @@
+MeshAudio Android 0.3.1
+MeshAudio original implementation: GPL-3.0-or-later.
+
+OkHttp 4.12.0: Copyright Square, Inc. Apache License, Version 2.0.
+Okio: Copyright Square, Inc. Apache License, Version 2.0.
+Kotlin standard library: Copyright JetBrains s.r.o. and Kotlin Programming Language contributors. Apache License, Version 2.0.
+
+Original library META-INF notices are retained by the Android packaging tool.
+Full licence texts are supplied in this assets/licenses directory. Matching
+application source, dependency checksums and build instructions accompany
+this internal test APK. Android SDK tools are not included in the application.

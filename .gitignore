@@ -1,0 +1,81 @@
+# ── Build artifacts ──────────────────────────────────────────
+node_modules/
+dist/
+target/
+build/
+*.o
+*.obj
+*.lib
+*.exe
+*.dll
+*.so
+*.dylib
+desktop/native/build/
+desktop-app/src-tauri/target/
+desktop-app/src-tauri/resources/
+desktop/airplay/*.exe
+desktop/airplay/*.dll
+
+# ── Android build ────────────────────────────────────────────
+android/.gradle/
+android/app/build/
+android/local.properties
+android/.cxx/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# ── Tools (proprietary SDKs, never redistribute) ────────────
+.build-tools/
+.tools/
+.local-external/
+
+# ── Runtime data (privacy) ───────────────────────────────────
+data/
+*.log
+tmp-sidecar-data*/
+tmp-*/
+
+# ── Binaries (release via GitHub Releases, not git) ─────────
+release/
+*.msi
+*-setup.exe
+desktop/airplay/*.exe
+desktop/airplay/*.dll
+VBCABLE_*.zip
+
+# ── OS / editor ─────────────────────────────────────────────
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+NUL
+
+# ── Misc stray files ─────────────────────────────────────────
+3
+*.tmp
+*.bak
+
+# Generated dependencies, local agent state and private handovers
+.workbuddy/
+.zcode/
+desktop-app/src-tauri/gen/
+desktop/airplay/
+third_party/bonjour/Lib/
+third_party/bonjour/dnssd.def
+third_party/UxPlay/.git/
+docs/testing/
+docs/HANDOVER*.md
+*.pfx
+*.p12
+*.key
+.env
+.env.*
+tools/*.wav
+tools/ui_*.png
+tools/VBCABLE_*.zip
