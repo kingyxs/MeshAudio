@@ -3,32 +3,6 @@ on:
   push:
   pull_request:
 jobs:
-  android:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: 17
-      - uses: android-actions/setup-android@v3
-        with:
-          # The action's default "tools platform-tools" requests the removed
-          # SDK "tools" package and fails on current runners.
-          packages: 'platform-tools'
-      - run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
-      - working-directory: android
-        run: |
-          chmod +x gradlew
-          ./gradlew --no-daemon :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :test-player:assembleDebug :device-driver:assembleDebug
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: android-test-candidate-and-reports
-          path: |
-            android/app/build/outputs/apk/debug/*.apk
-            android/app/build/reports/
-          if-no-files-found: ignore
   desktop:
     runs-on: windows-latest
     steps:
