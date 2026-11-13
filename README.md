@@ -104,15 +104,6 @@ Get-FileHash .\MeshAudio_0.3.1_x64-setup.exe -Algorithm SHA256
 | 提示「未知发布者」 | 安装包未做商业代码签名，核对 `SHA256SUMS.txt` 后可继续 |
 | 升级后设置不见了 | 配置保存在用户目录；普通退出请用托盘菜单 |
 
----
-
-## 使用前的几点说明
-
-- 本项目用于**可信局域网**。音频与控制协议没有加密和身份认证，不要把控制接口暴露到公网，也不要在访客网络里使用。
-- VB-CABLE、Apple Bonjour 是**可选专有组件，不随本项目分发**：只在你选择后由应用从原厂下载并执行官方安装器，其许可与安装条款以原厂为准。
-- 虚拟麦克风目前依赖外部 VB-CABLE，MeshAudio 自有内核虚拟设备尚未交付；iOS 原生 App / 后台采集扩展也未交付。
-- 不支持 macOS。
-- 这是预发布版本：干净 Windows 系统的完整安装/卸载、真实 iPhone 的 AAC-ELD 与耳机听感、两台设备并发、30 分钟连续播放、历史音频跳变问题等**还未验收通过**。详见 [已知限制](docs/KNOWN-LIMITATIONS.md) 与[验收记录](docs/ACCEPTANCE-0.3.1.md)，请不要把这些项目当作已完成。
 
 ---
 
@@ -120,7 +111,6 @@ Get-FileHash .\MeshAudio_0.3.1_x64-setup.exe -Algorithm SHA256
 
 - [完整项目说明](docs/PROJECT-OVERVIEW.md) — 架构、协议、功能清单、版本状态与路线图
 - [安装与排错](docs/WINDOWS-INSTALLATION.md) · [Android 指南](android/README.md) · [从源码构建](docs/PUBLIC-BUILD.md)
-- [验收记录](docs/ACCEPTANCE-0.3.1.md) · [Android 验收](docs/ACCEPTANCE-ANDROID-0.3.1.md) · [已知限制](docs/KNOWN-LIMITATIONS.md)
 - [许可说明](docs/LICENSING.md) · [第三方通知](THIRD-PARTY-NOTICES.md) · [安全说明](SECURITY.md)
 - [参与贡献](CONTRIBUTING.md) · [贡献者许可协议 CLA](CLA.md)
 
