@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1024px; height: 1024px; overflow: hidden; background: #0d1424; font-family: "Segoe UI", "Microsoft YaHei", sans-serif; }
+  .card { position: relative; width: 1024px; height: 1024px; background: radial-gradient(circle at 25% 15%, #17233d 0%, #0d1424 55%, #0a101e 100%); }
+  svg.circuit { position: absolute; inset: 0; }
+  .title { position: absolute; top: 62px; width: 100%; text-align: center; font-size: 104px; font-weight: 700; color: #ffffff; letter-spacing: 2px; }
+  .subtitle { position: absolute; top: 192px; width: 100%; text-align: center; font-size: 38px; font-weight: 400; color: #9fb3d1; letter-spacing: 10px; }
+  .tagline { position: absolute; top: 256px; width: 100%; text-align: center; font-size: 32px; color: #6d8dbb; }
+  .nodes { position: absolute; inset: 0; }
+  .node { position: absolute; height: 64px; border-radius: 14px; border: 2px solid; display: flex; align-items: center; justify-content: center; font-size: 25px; letter-spacing: 1px; background: rgba(23, 37, 66, 0.9); }
+  .src  { left: 90px;  width: 210px; border-color: #3d5a8a; color: #b8ccec; box-shadow: 0 0 18px rgba(61,90,138,.35); }
+  .ch   { left: 410px; width: 200px; border-color: #2f8fb8; color: #bfe9f7; box-shadow: 0 0 20px rgba(47,143,184,.4); }
+  .out  { left: 730px; width: 214px; border-color: #8a5fd0; color: #dcc8ff; box-shadow: 0 0 20px rgba(138,95,208,.4); }
+  .version { position: absolute; right: 48px; bottom: 40px; font-size: 30px; color: #54719c; letter-spacing: 1px; }
+  .footer { position: absolute; left: 48px; bottom: 40px; font-size: 26px; color: #54719c; }
+  .footer b { color: #7fa3d4; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="card">
+  <svg class="circuit" width="1024" height="1024" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="c1" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#35c3e8"/><stop offset="1" stop-color="#35e8c8"/>
+      </linearGradient>
+      <linearGradient id="c2" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#f5a623"/><stop offset="1" stop-color="#f56fa6"/>
+      </linearGradient>
+      <linearGradient id="c3" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#8a5fd0"/><stop offset="1" stop-color="#5d8bf5"/>
+      </linearGradient>
+    </defs>
+    <!-- 背景电路纹理 -->
+    <g stroke="#1c2b4a" stroke-width="2" fill="none" opacity="0.55">
+      <path d="M0 120 H160 L210 170 H340"/>
+      <path d="M1024 90 H880 L840 130 H720"/>
+      <path d="M0 800 H120 L150 830 H260"/>
+      <path d="M1024 300 H900 L860 340 H780"/>
+      <circle cx="160" cy="120" r="5"/><circle cx="880" cy="90" r="5"/>
+      <circle cx="120" cy="800" r="5"/><circle cx="900" cy="300" r="5"/>
+    </g>
+    <!-- 来源端口 -> 通道 -->
+    <g fill="none" stroke-width="7" stroke-linecap="round">
+      <path d="M300 392 C 355 392, 355 362, 410 362" stroke="url(#c1)"/>
+      <path d="M300 392 C 365 392, 345 445, 410 445" stroke="url(#c2)"/>
+      <path d="M300 487 C 360 487, 350 477, 410 477" stroke="url(#c2)"/>
+      <path d="M300 487 C 370 487, 340 707, 410 707" stroke="url(#c1)" opacity="0.75"/>
+      <path d="M300 582 C 360 582, 350 592, 410 592" stroke="url(#c3)"/>
+      <path d="M300 677 C 370 677, 340 592, 410 592" stroke="url(#c3)" opacity="0.75"/>
+      <path d="M300 772 C 360 772, 350 707, 410 707" stroke="url(#c1)"/>
+      <!-- 通道 -> 输出 -->
+      <path d="M610 362 C 670 362, 670 392, 730 392" stroke="url(#c1)"/>
+      <path d="M610 445 C 680 445, 660 392, 730 392" stroke="url(#c2)"/>
+      <path d="M610 477 C 670 477, 670 487, 730 487" stroke="url(#c2)"/>
+      <path d="M610 592 C 670 592, 670 582, 730 582" stroke="url(#c3)"/>
+      <path d="M610 592 C 680 592, 660 677, 730 677" stroke="url(#c3)"/>
+      <path d="M610 707 C 670 707, 670 677, 730 677" stroke="url(#c1)"/>
+      <path d="M610 362 C 700 362, 650 487, 730 487" stroke="url(#c2)" opacity="0.55"/>
+    </g>
+    <!-- 端口圆点 -->
+    <g fill="#0d1424" stroke-width="4">
+      <circle cx="300" cy="392" r="9" stroke="#35c3e8"/><circle cx="300" cy="487" r="9" stroke="#f5a623"/>
+      <circle cx="300" cy="582" r="9" stroke="#8a5fd0"/><circle cx="300" cy="677" r="9" stroke="#8a5fd0"/>
+      <circle cx="300" cy="772" r="9" stroke="#35c3e8"/>
+      <circle cx="410" cy="362" r="9" stroke="#35c3e8"/><circle cx="410" cy="445" r="9" stroke="#f5a623"/>
+      <circle cx="410" cy="477" r="9" stroke="#f5a623"/><circle cx="410" cy="592" r="9" stroke="#8a5fd0"/>
+      <circle cx="410" cy="707" r="9" stroke="#35c3e8"/>
+      <circle cx="610" cy="362" r="9" stroke="#35c3e8"/><circle cx="610" cy="445" r="9" stroke="#f5a623"/>
+      <circle cx="610" cy="477" r="9" stroke="#f5a623"/><circle cx="610" cy="592" r="9" stroke="#8a5fd0"/>
+      <circle cx="610" cy="707" r="9" stroke="#35c3e8"/>
+      <circle cx="730" cy="392" r="9" stroke="#35c3e8"/><circle cx="730" cy="487" r="9" stroke="#f5a623"/>
+      <circle cx="730" cy="582" r="9" stroke="#8a5fd0"/><circle cx="730" cy="677" r="9" stroke="#8a5fd0"/>
+    </g>
+    <!-- 底部声波纹样 -->
+    <g stroke="#2a4a7a" stroke-width="4" stroke-linecap="round" opacity="0.75">
+      <line x1="462" y1="880" x2="462" y2="904"/><line x1="492" y1="868" x2="492" y2="916"/>
+      <line x1="522" y1="856" x2="522" y2="928"/><line x1="552" y1="872" x2="552" y2="912"/>
+      <line x1="582" y1="862" x2="582" y2="922"/><line x1="612" y1="876" x2="612" y2="908"/>
+      <line x1="642" y1="884" x2="642" y2="900"/>
+    </g>
+  </svg>
+
+  <div class="title">MeshAudio</div>
+  <div class="subtitle">LAN AUDIO ROUTING</div>
+  <div class="tagline">把手机的声音，接到你想让它去的地方</div>
+
+  <div class="nodes">
+    <div class="node src"  style="top:360px">手机媒体</div>
+    <div class="node src"  style="top:455px">手机麦克风</div>
+    <div class="node src"  style="top:550px">AirPlay</div>
+    <div class="node src"  style="top:645px">网页麦克风</div>
+    <div class="node src"  style="top:740px">Android 节点</div>
+    <div class="node ch"   style="top:330px">通道 1</div>
+    <div class="node ch"   style="top:413px">通道 2</div>
+    <div class="node ch"   style="top:560px">通道 3</div>
+    <div class="node ch"   style="top:675px">通道 4</div>
+    <div class="node out"  style="top:360px">耳机输出</div>
+    <div class="node out"  style="top:455px">虚拟麦克风</div>
+    <div class="node out"  style="top:550px">系统扬声器</div>
+    <div class="node out"  style="top:645px">混音母线</div>
+  </div>
+
+  <div class="footer"><b>Windows · Android · iPhone AirPlay</b>　GPL-3.0 开源</div>
+  <div class="version">v0.3.1</div>
+</div>
+</body>
+</html>
