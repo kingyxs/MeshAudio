@@ -41,19 +41,19 @@ flowchart LR
     subgraph SRC["音频来源"]
         direction TB
         M["手机 · 媒体音频"]
-        V["手机 · 麦克风"]
         A["iPhone · AirPlay"]
-        W["浏览器 · 网页麦克风"]
+        V["手机 · 麦克风"]
+        W["网页麦克风"]
     end
     subgraph BUS["混音通道"]
         direction TB
         B1["主混音 · 耳机"]
-        B2["语音 · 虚拟麦克风"]
+        B2["语音通道"]
     end
     subgraph OUT["外部输出"]
         direction TB
         O1["系统播放设备"]
-        O2["VB-CABLE 虚拟麦克风"]
+        O2["虚拟麦克风"]
     end
     M --> B1
     A --> B1
