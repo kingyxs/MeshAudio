@@ -6,21 +6,15 @@
 
 **把手机的声音，接到你想让它去的地方**
 
-![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)
-
+[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)](LICENSE)
 ![Version](https://img.shields.io/badge/version-0.3.1-2ea44f?style=flat-square)
-
 ![Status](https://img.shields.io/badge/status-pre--release-orange?style=flat-square)
-
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20%7C%20Android%2010%2B-lightgrey?style=flat-square)
+[![Tauri](https://img.shields.io/badge/Tauri-2-24C8DB?style=flat-square&logo=tauri&logoColor=white)](https://tauri.app/)
+[![Vue](https://img.shields.io/badge/Vue-3-42B883?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![Rust](https://img.shields.io/badge/Rust-stable-dea584?style=flat-square&logo=rust&logoColor=white)](https://www.rust-lang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-22-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
 
-![Tauri](https://img.shields.io/badge/Tauri-2-24C8DB?style=flat-square\&logo=tauri\&logoColor=white)
-
-![Vue](https://img.shields.io/badge/Vue-3-42B883?style=flat-square\&logo=vue.js\&logoColor=white)
-
-![Rust](https://img.shields.io/badge/Rust-stable-dea584?style=flat-square\&logo=rust\&logoColor=white)
-
-![Node.js](https://img.shields.io/badge/Node.js-22-339933?style=flat-square\&logo=node.js\&logoColor=white)
 
 [下载与安装](#下载与安装) · [核心能力](#核心能力) · [工作原理](#工作原理) · [技术栈](#技术栈) · [从源码构建](#从源码构建) · [常见问题](#常见问题) · [参与贡献](#参与贡献)
 
